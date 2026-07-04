@@ -1,12 +1,10 @@
 "use client";
 
 import { useRef } from "react";
-import dynamic from "next/dynamic";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Download, Mail, Instagram, Sparkles, Film, Palette, Cpu, Flame } from "lucide-react";
+import { ArrowRight, Download, Mail, Instagram, Sparkles } from "lucide-react";
 import portfolioData from "@/content/portfolio.json";
-
-const HeroOrb = dynamic(() => import("./HeroOrb"), { ssr: false });
+import HeroShowcase from "./HeroShowcase";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -28,13 +26,6 @@ export default function HeroSection() {
       else contactEl.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  const floatingBadges = [
-    { label: "Premiere Pro", icon: Film, delay: 0, position: "-top-4 left-6" },
-    { label: "After Effects", icon: Sparkles, delay: 1.5, position: "top-1/4 -right-4" },
-    { label: "DaVinci Resolve", icon: Palette, delay: 0.8, position: "bottom-12 -left-6" },
-    { label: "AI Creative Workflows", icon: Cpu, delay: 2.2, position: "-bottom-4 right-8" },
-  ];
 
   return (
     <section
@@ -63,7 +54,7 @@ export default function HeroSection() {
           <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#e1e440" />
             <stop offset="50%" stopColor="#186e4f" />
-            <stop offset="100%" stopColor="#072e27" />
+            <stop offset="100%" stopColor="#070d0c" />
           </linearGradient>
           <linearGradient id="heroGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#186e4f" />
@@ -128,7 +119,7 @@ export default function HeroSection() {
             <a
               href="#contact"
               onClick={scrollToContact}
-              className="px-7 py-3.5 rounded-full bg-[#fffdec] text-[#072e27] font-space font-bold text-xs sm:text-sm hover:bg-[#fffdec]/90 shadow-xl shadow-[#fffdec]/10 hover:scale-[1.03] active:scale-[0.98] transition-all flex items-center gap-2 group"
+              className="px-7 py-3.5 rounded-full bg-[#fffdec] text-[#070d0c] font-space font-bold text-xs sm:text-sm hover:bg-[#fffdec]/90 shadow-xl shadow-[#fffdec]/10 hover:scale-[1.03] active:scale-[0.98] transition-all flex items-center gap-2 group"
             >
               <span>Let&apos;s work together</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -176,39 +167,10 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Right Column: 3D Crystal Object with Floating Badges */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="lg:col-span-5 flex items-center justify-center relative"
-        >
-          <HeroOrb />
-
-          {/* Floating Skill Badges overlaying around 3D crystal */}
-          {floatingBadges.map((badge) => {
-            const Icon = badge.icon;
-            return (
-              <motion.div
-                key={badge.label}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: [0, -10, 0] }}
-                transition={{
-                  opacity: { duration: 0.6, delay: 0.5 },
-                  y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: badge.delay },
-                }}
-                className={`absolute ${badge.position} hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-2xl glass-strong border-[#fffdec]/20 shadow-2xl z-20 pointer-events-none`}
-              >
-                <div className="p-1.5 rounded-xl bg-[#e1e440]/20 text-[#e1e440]">
-                  <Icon className="w-3.5 h-3.5" />
-                </div>
-                <span className="text-xs font-space font-bold text-[#fffdec]/90 whitespace-nowrap">
-                  {badge.label}
-                </span>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+        {/* Right Column: Software Showcase & Impact Numbers */}
+        <div className="lg:col-span-5 flex items-center justify-center">
+          <HeroShowcase />
+        </div>
       </motion.div>
     </section>
   );

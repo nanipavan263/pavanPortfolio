@@ -64,7 +64,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-[#072e27]/80 backdrop-blur-md"
+            className="fixed inset-0 bg-[#070d0c]/80 backdrop-blur-md"
           />
 
           {/* Dialog Modal */}

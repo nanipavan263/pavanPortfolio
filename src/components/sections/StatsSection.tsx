@@ -1,38 +1,7 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-
-function AnimatedCounter({ value, duration = 1.8 }: { value: number; duration?: number }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (!isInView) return;
-
-    let start = 0;
-    const end = value;
-    const totalFrames = Math.round(duration * 60);
-    let frame = 0;
-
-    const counter = setInterval(() => {
-      frame++;
-      const progress = frame / totalFrames;
-      const currentCount = Math.round(end * (1 - Math.pow(1 - progress, 3)));
-      setCount(currentCount);
-
-      if (frame === totalFrames) {
-        clearInterval(counter);
-        setCount(end);
-      }
-    }, 1000 / 60);
-
-    return () => clearInterval(counter);
-  }, [isInView, value, duration]);
-
-  return <span ref={ref}>{count}</span>;
-}
+import { motion } from "framer-motion";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 export default function StatsSection() {
   const stats = [

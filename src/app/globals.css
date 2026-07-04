@@ -4,17 +4,17 @@
 
 @layer base {
   :root {
-    --background: 169 74% 10%;
+    --background: 170 30% 4%;
     --foreground: 54 100% 96%;
-    --card: 169 50% 13%;
+    --card: 170 30% 7%;
     --card-foreground: 54 100% 96%;
     --primary: 158 64% 26%;
     --primary-foreground: 54 100% 96%;
     --accent: 61 75% 57%;
-    --accent-foreground: 169 74% 10%;
-    --muted: 169 40% 18%;
+    --accent-foreground: 170 30% 4%;
+    --muted: 170 25% 11%;
     --muted-foreground: 60 20% 75%;
-    --border: 169 40% 20%;
+    --border: 170 25% 13%;
   }
 
   html {
@@ -28,12 +28,12 @@
     font-family: var(--font-inter), sans-serif;
     overflow-x: hidden;
     selection-background-color: hsl(var(--accent) / 0.35);
-    selection-color: #072e27;
+    selection-color: #070d0c;
   }
 
   ::selection {
     background: rgba(225, 228, 64, 0.35);
-    color: #072e27;
+    color: #070d0c;
   }
 }
 
@@ -67,7 +67,7 @@
   }
 
   .text-gradient-accent {
-    background: linear-gradient(135deg, #e1e440 0%, #186e4f 50%, #072e27 100%);
+    background: linear-gradient(135deg, #e1e440 0%, #186e4f 50%, #070d0c 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -84,7 +84,7 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #072e27;
+  background: #070d0c;
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 253, 236, 0.15);

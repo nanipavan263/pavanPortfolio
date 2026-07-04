@@ -49,7 +49,7 @@ export default function ProjectsSection() {
                 onClick={() => setFilter(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-space font-medium transition-all ${
                   filter === cat
-                    ? "bg-gradient-to-r from-[#e1e440] to-[#186e4f] text-[#072e27] shadow-md shadow-[#e1e440]/20"
+                    ? "bg-gradient-to-r from-[#e1e440] to-[#186e4f] text-[#070d0c] shadow-md shadow-[#e1e440]/20"
                     : "glass text-[#fffdec]/70 hover:text-[#fffdec] hover:bg-[#fffdec]/10"
                 }`}
               >
@@ -80,15 +80,15 @@ export default function ProjectsSection() {
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#072e27] via-[#072e27]/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#070d0c] via-[#070d0c]/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
                   {/* Play Button Overlay */}
                   <button
                     onClick={() => setSelectedProject(project)}
-                    className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-[#e1e440]/90 text-[#072e27] flex items-center justify-center shadow-2xl shadow-[#e1e440]/50 scale-90 group-hover:scale-100 transition-all duration-300"
+                    className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-[#e1e440]/90 text-[#070d0c] flex items-center justify-center shadow-2xl shadow-[#e1e440]/50 scale-90 group-hover:scale-100 transition-all duration-300"
                     aria-label="Preview Project"
                   >
-                    <Play className="w-7 h-7 fill-[#072e27] translate-x-0.5" />
+                    <Play className="w-7 h-7 fill-[#070d0c] translate-x-0.5" />
                   </button>
 
                   {/* Client Tag */}
@@ -146,7 +146,7 @@ export default function ProjectsSection() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedProject(null)}
-              className="fixed inset-0 bg-[#072e27]/90 backdrop-blur-xl"
+              className="fixed inset-0 bg-[#070d0c]/90 backdrop-blur-xl"
             />
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -169,14 +169,14 @@ export default function ProjectsSection() {
                 </button>
               </div>
 
-              <div className="aspect-video w-full bg-[#072e27] flex items-center justify-center relative">
+              <div className="aspect-video w-full bg-[#070d0c] flex items-center justify-center relative">
                 {/* Simulated High-Res Video Player Frame */}
                 <img
                   src={selectedProject.thumbnail}
                   alt={selectedProject.title}
                   className="w-full h-full object-cover opacity-80"
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#072e27]/60 p-6 text-center">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#070d0c]/60 p-6 text-center">
                   <Play className="w-16 h-16 text-[#e1e440] mb-4 animate-pulse" />
                   <h5 className="font-space font-bold text-xl text-[#fffdec] mb-2">
                     Commercial Video Preview Showcase

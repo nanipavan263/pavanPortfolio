@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Award-winning portfolio of Pavan Kalyan",
     start_url: "/",
     display: "standalone",
-    background_color: "#072e27",
-    theme_color: "#072e27",
+    background_color: "#070d0c",
+    theme_color: "#070d0c",
     icons: [
       {
         src: "/favicon.ico",

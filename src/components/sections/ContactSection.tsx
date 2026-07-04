@@ -110,7 +110,7 @@ export default function ContactSection() {
                 href={`mailto:${portfolioData.socials.email}`}
                 className="flex items-center gap-4 p-4 rounded-2xl bg-[#fffdec]/5 hover:bg-[#fffdec]/10 transition-colors group border border-[#fffdec]/5"
               >
-                <div className="p-3 rounded-xl bg-[#e1e440]/10 text-[#e1e440] border border-[#e1e440]/20 group-hover:bg-[#e1e440] group-hover:text-[#072e27] transition-colors">
+                <div className="p-3 rounded-xl bg-[#e1e440]/10 text-[#e1e440] border border-[#e1e440]/20 group-hover:bg-[#e1e440] group-hover:text-[#070d0c] transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -265,7 +265,7 @@ export default function ContactSection() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#186e4f] to-[#e1e440] font-space font-bold text-sm text-[#072e27] shadow-xl shadow-[#e1e440]/25 hover:shadow-[#e1e440]/40 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                      className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#186e4f] to-[#e1e440] font-space font-bold text-sm text-[#070d0c] shadow-xl shadow-[#e1e440]/25 hover:shadow-[#e1e440]/40 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
                     >
                       {isSubmitting ? (
                         <>

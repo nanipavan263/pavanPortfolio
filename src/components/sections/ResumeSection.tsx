@@ -51,7 +51,7 @@ export default function ResumeSection() {
               <a
                 href={portfolioData.hero.resumeUrl}
                 download="Pavan_Kalyan_Resume.pdf"
-                className="px-8 py-4 rounded-2xl bg-gradient-to-r from-[#e1e440] via-[#186e4f] to-[#fffdec] font-space font-semibold text-sm text-[#072e27] shadow-xl shadow-[#e1e440]/25 hover:shadow-[#e1e440]/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2"
+                className="px-8 py-4 rounded-2xl bg-gradient-to-r from-[#e1e440] via-[#186e4f] to-[#fffdec] font-space font-semibold text-sm text-[#070d0c] shadow-xl shadow-[#e1e440]/25 hover:shadow-[#e1e440]/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2"
               >
                 <Download className="w-4 h-4" />
                 <span>Download PDF Resume</span>
@@ -73,7 +73,7 @@ export default function ResumeSection() {
           <div className="w-full lg:w-96 aspect-[3/4] glass rounded-2xl border-[#fffdec]/15 p-6 flex flex-col justify-between relative group shadow-2xl">
             <div className="flex items-center justify-between border-b border-[#fffdec]/10 pb-4">
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-[#e1e440] text-[#072e27] flex items-center justify-center font-space font-bold text-xs">
+                <div className="w-7 h-7 rounded-lg bg-[#e1e440] text-[#070d0c] flex items-center justify-center font-space font-bold text-xs">
                   PK
                 </div>
                 <span className="font-space text-xs font-bold text-[#fffdec]">PAVAN KALYAN</span>

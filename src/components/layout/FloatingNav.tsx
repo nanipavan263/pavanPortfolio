@@ -60,7 +60,7 @@ export default function FloatingNav({ onOpenCommandPalette }: { onOpenCommandPal
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className={`glass-strong rounded-full px-4 sm:px-6 py-2.5 flex items-center gap-2 sm:gap-6 shadow-2xl transition-all duration-300 ${
-            scrolled ? "border-[#fffdec]/20 shadow-[#072e27]/40 bg-[#072e27]/90" : "border-[#fffdec]/10"
+            scrolled ? "border-[#fffdec]/20 shadow-[#070d0c]/40 bg-[#070d0c]/90" : "border-[#fffdec]/10"
           }`}
         >
           {/* PK. Logo */}
@@ -105,7 +105,7 @@ export default function FloatingNav({ onOpenCommandPalette }: { onOpenCommandPal
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-1.5 rounded-full bg-gradient-to-r from-[#186e4f] to-[#e1e440] hover:from-[#1f8560] hover:to-[#ecef6d] font-space text-[11px] font-bold text-[#072e27] shadow-md shadow-[#e1e440]/30 transition-all flex items-center gap-1.5"
+              className="px-4 py-1.5 rounded-full bg-gradient-to-r from-[#186e4f] to-[#e1e440] hover:from-[#1f8560] hover:to-[#ecef6d] font-space text-[11px] font-bold text-[#070d0c] shadow-md shadow-[#e1e440]/30 transition-all flex items-center gap-1.5"
             >
               <Download className="w-3 h-3" />
               <span>Resume</span>
@@ -129,7 +129,7 @@ export default function FloatingNav({ onOpenCommandPalette }: { onOpenCommandPal
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-30 bg-[#072e27]/95 backdrop-blur-2xl md:hidden flex flex-col justify-center items-center px-6"
+            className="fixed inset-0 z-30 bg-[#070d0c]/95 backdrop-blur-2xl md:hidden flex flex-col justify-center items-center px-6"
           >
             <nav className="flex flex-col items-center gap-6 w-full max-w-sm">
               {navItems.map((item, index) => (

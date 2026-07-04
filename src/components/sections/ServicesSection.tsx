@@ -57,7 +57,7 @@ export default function ServicesSection() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#e1e440]/10 rounded-full blur-2xl group-hover:bg-[#e1e440]/25 transition-colors duration-500 pointer-events-none" />
 
                 <div>
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#e1e440]/20 to-[#186e4f]/20 border border-[#e1e440]/30 flex items-center justify-center text-[#e1e440] mb-6 group-hover:scale-110 group-hover:bg-[#e1e440] group-hover:text-[#072e27] transition-all duration-300 shadow-lg">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#e1e440]/20 to-[#186e4f]/20 border border-[#e1e440]/30 flex items-center justify-center text-[#e1e440] mb-6 group-hover:scale-110 group-hover:bg-[#e1e440] group-hover:text-[#070d0c] transition-all duration-300 shadow-lg">
                     <Icon className="w-7 h-7" />
                   </div>
 

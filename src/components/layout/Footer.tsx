@@ -16,7 +16,7 @@ export default function Footer() {
   const marqueeText = "MOTION GRAPHICS • COMMERCIAL ADS • COLOR GRADING • AI CREATIVE WORKFLOWS • STORYTELLING • ";
 
   return (
-    <footer className="relative z-10 pt-20 pb-10 border-t border-[#fffdec]/10 bg-[#072e27]/90 overflow-hidden">
+    <footer className="relative z-10 pt-20 pb-10 border-t border-[#fffdec]/10 bg-[#070d0c]/90 overflow-hidden">
       {/* Infinite Scrolling Marquee */}
       <div className="w-full overflow-hidden py-6 bg-gradient-to-r from-[#186e4f]/20 via-[#e1e440]/10 to-[#186e4f]/20 border-y border-[#fffdec]/5 mb-16">
         <div className="whitespace-nowrap flex animate-marquee">
@@ -34,7 +34,7 @@ export default function Footer() {
           {/* Left Monogram & Bio */}
           <div className="md:col-span-6 flex flex-col items-start gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#186e4f] to-[#e1e440] flex items-center justify-center font-space font-extrabold text-sm tracking-tighter text-[#072e27] shadow-lg shadow-[#e1e440]/20">
+              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#186e4f] to-[#e1e440] flex items-center justify-center font-space font-extrabold text-sm tracking-tighter text-[#070d0c] shadow-lg shadow-[#e1e440]/20">
                 PK
               </div>
               <span className="font-space font-bold text-xl tracking-tight text-[#fffdec]">

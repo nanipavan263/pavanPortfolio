@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "hsl(169 74% 10%)",
+        background: "hsl(170 30% 4%)",
         foreground: "hsl(54 100% 96%)",
         card: {
-          DEFAULT: "hsl(169 50% 13%)",
+          DEFAULT: "hsl(170 30% 7%)",
           foreground: "hsl(54 100% 96%)",
         },
         primary: {
@@ -22,16 +22,16 @@ const config: Config = {
         },
         accent: {
           DEFAULT: "hsl(61 75% 57%)",
-          foreground: "hsl(169 74% 10%)",
+          foreground: "hsl(170 30% 4%)",
         },
         muted: {
-          DEFAULT: "hsl(169 40% 18%)",
+          DEFAULT: "hsl(170 25% 11%)",
           foreground: "hsl(60 20% 75%)",
         },
-        border: "hsl(169 40% 20%)",
+        border: "hsl(170 25% 13%)",
         brand: {
           yellow: "#e1e440",
-          dark: "#072e27",
+          dark: "#070d0c",
           green: "#186e4f",
           cream: "#fffdec",
         },

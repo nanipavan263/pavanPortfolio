@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#072e27",
+  themeColor: "#070d0c",
   width: "device-width",
   initialScale: 1,
 };
@@ -71,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`dark ${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="relative bg-[#072e27] text-[#fffdec] antialiased selection:bg-[#e1e440]/30 selection:text-[#072e27] min-h-screen">
+      <body className="relative bg-[#070d0c] text-[#fffdec] antialiased selection:bg-[#e1e440]/30 selection:text-[#070d0c] min-h-screen">
         {/* JSON-LD Person Schema */}
         <script
           type="application/ld+json"

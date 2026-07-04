@@ -14,7 +14,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative z-10 pt-20 pb-10 border-t border-[#fffdec]/10 bg-[#072e27]/90 overflow-hidden">
+    <footer className="relative z-10 pt-20 pb-10 border-t border-[#fffdec]/10 bg-[#070d0c]/90 overflow-hidden">
       {/* Marquee matching screenshot 4 */}
       <div className="w-full overflow-hidden py-12 bg-gradient-to-r from-[#e1e440]/10 via-[#186e4f]/20 to-[#e1e440]/10 border-y border-[#fffdec]/5 mb-16 select-none">
         <div className="whitespace-nowrap flex animate-marquee items-center gap-12">
@@ -74,7 +74,7 @@ export default function Footer() {
 
             <button
               onClick={scrollToTop}
-              className="px-6 py-3 rounded-full bg-[#fffdec] text-[#072e27] font-space font-bold text-xs hover:bg-[#fffdec]/90 shadow-lg transition-all flex items-center gap-1.5 ml-2"
+              className="px-6 py-3 rounded-full bg-[#fffdec] text-[#070d0c] font-space font-bold text-xs hover:bg-[#fffdec]/90 shadow-lg transition-all flex items-center gap-1.5 ml-2"
             >
               <span>Back to top</span>
               <ArrowUp className="w-3.5 h-3.5" />

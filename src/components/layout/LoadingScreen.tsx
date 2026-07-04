@@ -22,7 +22,7 @@ export default function LoadingScreen() {
       exit={{ opacity: 0 }}
       animate={{ opacity: isLoading ? 1 : 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="fixed inset-0 z-50 bg-[#072e27] flex flex-col items-center justify-center pointer-events-none"
+      className="fixed inset-0 z-50 bg-[#070d0c] flex flex-col items-center justify-center pointer-events-none"
     >
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
@@ -32,7 +32,7 @@ export default function LoadingScreen() {
       >
         {/* Monogram Badge */}
         <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-[#186e4f] via-[#e1e440] to-[#fffdec] p-[2px] shadow-2xl shadow-[#186e4f]/30">
-          <div className="w-full h-full bg-[#072e27] rounded-[22px] flex items-center justify-center">
+          <div className="w-full h-full bg-[#070d0c] rounded-[22px] flex items-center justify-center">
             <span className="font-space font-extrabold text-3xl bg-gradient-to-r from-[#fffdec] via-[#e1e440] to-[#186e4f] bg-clip-text text-transparent tracking-tighter">
               PK
             </span>
