@@ -7,6 +7,7 @@ import CommandPalette from "@/components/layout/CommandPalette";
 import Footer from "@/components/sections/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
+import CinematicPinSection from "@/components/sections/CinematicPinSection";
 import StatsSection from "@/components/sections/StatsSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import ServicesSection from "@/components/sections/ServicesSection";
@@ -30,6 +31,7 @@ export default function Home() {
 
       <HeroSection />
       <AboutSection />
+      <CinematicPinSection />
       <StatsSection />
       <ExperienceSection />
       <ServicesSection />
