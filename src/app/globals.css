@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 169 74% 10%;
+    --foreground: 54 100% 96%;
+    --card: 169 50% 13%;
+    --card-foreground: 54 100% 96%;
+    --primary: 158 64% 26%;
+    --primary-foreground: 54 100% 96%;
+    --accent: 61 75% 57%;
+    --accent-foreground: 169 74% 10%;
+    --muted: 169 40% 18%;
+    --muted-foreground: 60 20% 75%;
+    --border: 169 40% 20%;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-inter), sans-serif;
+    overflow-x: hidden;
+    selection-background-color: hsl(var(--accent) / 0.35);
+    selection-color: #072e27;
+  }
+
+  ::selection {
+    background: rgba(225, 228, 64, 0.35);
+    color: #072e27;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 253, 236, 0.06) 0%,
+      rgba(255, 253, 236, 0.02) 100%
+    );
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid rgba(255, 253, 236, 0.08);
+  }
+
+  .glass-strong {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 253, 236, 0.09) 0%,
+      rgba(255, 253, 236, 0.03) 100%
+    );
+    backdrop-filter: blur(28px) saturate(160%);
+    -webkit-backdrop-filter: blur(28px) saturate(160%);
+    border: 1px solid rgba(255, 253, 236, 0.12);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #fffdec 0%, #e1e440 45%, #186e4f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #e1e440 0%, #186e4f 50%, #072e27 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-grid-pattern {
+    background-size: 64px 64px;
+    background-image: linear-gradient(to right, rgba(255, 253, 236, 0.04) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 253, 236, 0.04) 1px, transparent 1px);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #072e27;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 253, 236, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(225, 228, 64, 0.5);
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "stat-1",
+    "label": "Clients Served",
+    "value": 50,
+    "suffix": "+",
+    "description": "Brands and agency partners worldwide"
+  },
+  {
+    "id": "stat-2",
+    "label": "Marketing Creatives",
+    "value": 100,
+    "suffix": "+",
+    "description": "High-converting video deliverables"
+  },
+  {
+    "id": "stat-3",
+    "label": "Years Experience",
+    "value": 2,
+    "suffix": "+",
+    "description": "Professional video editing & motion graphics"
+  },
+  {
+    "id": "stat-4",
+    "label": "Satisfaction Rate",
+    "value": 99,
+    "suffix": "%",
+    "description": "Client approval and project success"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "srv-1",
+    "title": "Commercial Video Editing",
+    "description": "High-impact video editing tailored for commercial ads, brand launches, and performance marketing campaigns.",
+    "icon": "Film",
+    "highlights": ["Multi-cam editing", "Dynamic pacing", "Sound design & mixing", "Platform optimization"]
+  },
+  {
+    "id": "srv-2",
+    "title": "Motion Graphics & VFX",
+    "description": "Custom animations, kinetic typography, dynamic lower-thirds, and visual effects built in After Effects.",
+    "icon": "Sparkles",
+    "highlights": ["Logo animations", "2D/3D motion assets", "Kinetic typography", "Explainer graphics"]
+  },
+  {
+    "id": "srv-3",
+    "title": "Cinematic Color Grading",
+    "description": "Professional color transformation in DaVinci Resolve to establish atmospheric moods and brand color fidelity.",
+    "icon": "Palette",
+    "highlights": ["LUT development", "Skin tone correction", "Shot matching", "HDR workflows"]
+  },
+  {
+    "id": "srv-4",
+    "title": "AI-Powered Creative Workflows",
+    "description": "Leveraging generative AI tools to accelerate video production, visual asset creation, and voice synthesis.",
+    "icon": "Cpu",
+    "highlights": ["AI voiceover integration", "Automated captioning", "Generative visual effects", "Smart workflow scaling"]
+  },
+  {
+    "id": "srv-5",
+    "title": "Social Media Reels & Shorts",
+    "description": "Attention-grabbing short-form video content engineered for viral reach on Instagram, YouTube Shorts, and TikTok.",
+    "icon": "Smartphone",
+    "highlights": ["Hook-focused edits", "Custom sound effects", "Trendy transitions", "Vertical framing"]
+  },
+  {
+    "id": "srv-6",
+    "title": "Brand Campaign Creatives",
+    "description": "Comprehensive visual marketing assets and promo videos designed to elevate brand identity and drive conversions.",
+    "icon": "Megaphone",
+    "highlights": ["Ad variations", "A/B creative testing", "Brand storytelling", "High-ROI visuals"]
+  }
+]

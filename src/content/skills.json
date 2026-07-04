@@ -1,0 +1,12 @@
+[
+  { "name": "Motion Graphics", "level": 95, "category": "Creative Tools", "icon": "Palette" },
+  { "name": "Video Editing", "level": 98, "category": "Video Editing", "icon": "Film" },
+  { "name": "Adobe Premiere Pro", "level": 96, "category": "Video Editing", "icon": "Film" },
+  { "name": "Adobe After Effects", "level": 94, "category": "Creative Tools", "icon": "Sparkles" },
+  { "name": "Color Grading", "level": 90, "category": "Creative Tools", "icon": "Palette" },
+  { "name": "DaVinci Resolve", "level": 92, "category": "Creative Tools", "icon": "Cpu" },
+  { "name": "AI Video Editing", "level": 88, "category": "AI Tools", "icon": "Cpu" },
+  { "name": "Visual Storytelling", "level": 95, "category": "Soft Skills", "icon": "Lightbulb" },
+  { "name": "Commercial Ad Design", "level": 94, "category": "Creative Tools", "icon": "Megaphone" },
+  { "name": "Social Media Content", "level": 96, "category": "Video Editing", "icon": "Smartphone" }
+]

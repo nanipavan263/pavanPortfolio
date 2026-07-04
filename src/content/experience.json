@@ -1,0 +1,38 @@
+[
+  {
+    "id": "exp-1",
+    "company": "The Vivid View (Marketing Agency)",
+    "role": "Motion Graphics & Commercial Video Specialist",
+    "duration": "MAY 2025 – PRESENT",
+    "isCurrent": true,
+    "responsibilities": [
+      "Creating high-converting commercial ads, social media campaigns, and motion graphics for digital marketing clients.",
+      "Developing end-to-end brand video content strategies with cinematic visual pacing and modern visual effects.",
+      "Collaborating with marketing directors to maximize performance analytics and engagement metrics through dynamic video editing."
+    ]
+  },
+  {
+    "id": "exp-2",
+    "company": "BIG TV & Chota News",
+    "role": "Broadcast & Digital Media Video Editor",
+    "duration": "DECEMBER 2024 – MAY 2025",
+    "isCurrent": false,
+    "responsibilities": [
+      "Edited promotional videos, broadcast television content, and fast-paced digital media for high-traffic platforms.",
+      "Managed rapid turnarounds for news reels, promotional packages, and animated lower-thirds under tight deadlines.",
+      "Enhanced audio engineering, color correction, and visual consistency across all broadcast segments."
+    ]
+  },
+  {
+    "id": "exp-3",
+    "company": "Grid Marketing Agency",
+    "role": "Video Editor & Graphic Designer (Intern to Full-Time)",
+    "duration": "MAR 2024 – NOV 2024",
+    "isCurrent": false,
+    "responsibilities": [
+      "Designed performance marketing creatives and edited promotional videos, advertisements, and social media content for multiple brands.",
+      "Executed motion graphics, product highlights, and creative storytelling assets across social campaigns.",
+      "Promoted from intern (Mar 2024 – May 2024) to full-time specialist (June 2024 – Nov 2024) based on outstanding creative output."
+    ]
+  }
+]

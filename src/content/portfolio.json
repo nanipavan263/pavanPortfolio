@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "greeting": "Creative Director & Editor",
+    "name": "PAVAN KALYAN",
+    "titles": ["Video Editor", "Motion Graphics Designer", "AI Creative Specialist", "Colorist"],
+    "headline": "Crafting high-impact commercial ads, immersive motion graphics, and digital storytelling for global brands.",
+    "location": "Hyderabad, Telangana",
+    "resumeUrl": "/resume.pdf"
+  },
+  "bio": "Creative Video Editor and Motion Graphics Designer with 2+ years of experience creating engaging content for brands and digital platforms. Skilled in high-end video editing, visual storytelling, dynamic motion graphics, professional color grading, and AI-powered creative workflows.",
+  "languages": ["Telugu", "English", "Hindi"],
+  "socials": {
+    "instagram": "https://instagram.com/pavannanifx",
+    "email": "nanipavan263@gmail.com",
+    "phone": "+91 6281423835",
+    "location": "Hyderabad, Telangana"
+  }
+}

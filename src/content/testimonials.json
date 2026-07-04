@@ -1,0 +1,23 @@
+[
+  {
+    "id": "test-1",
+    "quote": "Pavan's motion graphics elevate our brand campaigns to a whole new level. His turnarounds are incredibly fast and his creative instincts are top-tier.",
+    "author": "Creative Lead",
+    "role": "Marketing Director",
+    "company": "The Vivid View"
+  },
+  {
+    "id": "test-2",
+    "quote": "An exceptional video editor who understands story pacing, color theory, and audio balance flawlessly. Working with Pavan is seamless.",
+    "author": "Producer",
+    "role": "Broadcast Manager",
+    "company": "BIG TV / Chota News"
+  },
+  {
+    "id": "test-3",
+    "quote": "Pavan delivered over 100 high-performing marketing creatives for our clients. His AI workflow integration boosted our output tremendously.",
+    "author": "Agency Director",
+    "role": "Operations Head",
+    "company": "Grid Marketing Agency"
+  }
+]
