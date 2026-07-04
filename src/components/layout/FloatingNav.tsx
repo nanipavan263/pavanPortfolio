@@ -59,8 +59,8 @@ export default function FloatingNav({ onOpenCommandPalette }: { onOpenCommandPal
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className={`glass-strong rounded-full px-4 sm:px-6 py-2.5 flex items-center gap-2 sm:gap-6 shadow-2xl transition-all duration-300 ${
-            scrolled ? "border-[#fffdec]/20 shadow-[#070d0c]/40 bg-[#070d0c]/90" : "border-[#fffdec]/10"
+          className={`glass-strong rounded-full px-4 sm:px-6 py-2.5 flex items-center gap-2 sm:gap-6 transition-all duration-300 ${
+            scrolled ? "border-[#fffdec]/20 bg-[#070d0c]/90" : "border-[#fffdec]/10"
           }`}
         >
           {/* PK. Logo */}
@@ -89,7 +89,7 @@ export default function FloatingNav({ onOpenCommandPalette }: { onOpenCommandPal
                   {isActive && (
                     <motion.div
                       layoutId="activePill"
-                      className="absolute inset-0 bg-[#fffdec]/10 rounded-full border border-[#fffdec]/15 shadow-sm"
+                      className="absolute inset-0 bg-[#fffdec]/10 rounded-full border border-[#fffdec]/15"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -105,7 +105,7 @@ export default function FloatingNav({ onOpenCommandPalette }: { onOpenCommandPal
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-1.5 rounded-full bg-gradient-to-r from-[#186e4f] to-[#e1e440] hover:from-[#1f8560] hover:to-[#ecef6d] font-space text-[11px] font-bold text-[#070d0c] shadow-md shadow-[#e1e440]/30 transition-all flex items-center gap-1.5"
+              className="px-4 py-1.5 rounded-full bg-gradient-to-r from-[#186e4f] to-[#e1e440] hover:from-[#1f8560] hover:to-[#ecef6d] font-space text-[11px] font-bold text-[#070d0c] transition-all flex items-center gap-1.5"
             >
               <Download className="w-3 h-3" />
               <span>Resume</span>

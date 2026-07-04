@@ -52,12 +52,12 @@ export default function ServicesSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="glass-strong rounded-3xl p-8 border-[#fffdec]/15 relative overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:border-[#e1e440]/50 hover:shadow-2xl hover:shadow-[#186e4f]/30"
+                className="glass-strong rounded-3xl p-8 border-[#fffdec]/15 relative overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:border-[#e1e440]/50"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#e1e440]/10 rounded-full blur-2xl group-hover:bg-[#e1e440]/25 transition-colors duration-500 pointer-events-none" />
 
                 <div>
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#e1e440]/20 to-[#186e4f]/20 border border-[#e1e440]/30 flex items-center justify-center text-[#e1e440] mb-6 group-hover:scale-110 group-hover:bg-[#e1e440] group-hover:text-[#070d0c] transition-all duration-300 shadow-lg">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#e1e440]/20 to-[#186e4f]/20 border border-[#e1e440]/30 flex items-center justify-center text-[#e1e440] mb-6 group-hover:scale-110 group-hover:bg-[#e1e440] group-hover:text-[#070d0c] transition-all duration-300">
                     <Icon className="w-7 h-7" />
                   </div>
 

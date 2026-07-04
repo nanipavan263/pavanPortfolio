@@ -71,7 +71,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border-[#fffdec]/10 text-[10px] sm:text-xs font-mono tracking-widest text-[#fffdec]/80 mb-8 shadow-lg shadow-[#186e4f]/10"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border-[#fffdec]/10 text-[10px] sm:text-xs font-mono tracking-widest text-[#fffdec]/80 mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-[#186e4f] animate-ping" />
             <span className="w-2 h-2 rounded-full bg-[#186e4f] -ml-4" />
@@ -119,7 +119,7 @@ export default function HeroSection() {
             <a
               href="#contact"
               onClick={scrollToContact}
-              className="px-7 py-3.5 rounded-full bg-[#fffdec] text-[#070d0c] font-space font-bold text-xs sm:text-sm hover:bg-[#fffdec]/90 shadow-xl shadow-[#fffdec]/10 hover:scale-[1.03] active:scale-[0.98] transition-all flex items-center gap-2 group"
+              className="px-7 py-3.5 rounded-full bg-[#fffdec] text-[#070d0c] font-space font-bold text-xs sm:text-sm hover:bg-[#fffdec]/90 hover:scale-[1.03] active:scale-[0.98] transition-all flex items-center gap-2 group"
             >
               <span>Let&apos;s work together</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

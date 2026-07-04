@@ -34,7 +34,7 @@ export default function Footer() {
           {/* Left Monogram & Bio */}
           <div className="md:col-span-6 flex flex-col items-start gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#186e4f] to-[#e1e440] flex items-center justify-center font-space font-extrabold text-sm tracking-tighter text-[#070d0c] shadow-lg shadow-[#e1e440]/20">
+              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#186e4f] to-[#e1e440] flex items-center justify-center font-space font-extrabold text-sm tracking-tighter text-[#070d0c]">
                 PK
               </div>
               <span className="font-space font-bold text-xl tracking-tight text-[#fffdec]">

@@ -108,7 +108,7 @@ export default function ExperienceSection() {
               >
                 {/* Timeline Spine Node */}
                 <div className="hidden lg:flex absolute left-[35%] -translate-x-1/2 top-8 z-20 items-center justify-center">
-                  <div className="w-4 h-4 rounded-full bg-[#e1e440] border-4 border-[#070d0c] shadow-lg shadow-[#e1e440]/50" />
+                  <div className="w-4 h-4 rounded-full bg-[#e1e440] border-4 border-[#070d0c]" />
                 </div>
 
                 {/* Left Column: Dates & Company */}

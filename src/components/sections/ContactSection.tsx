@@ -181,7 +181,7 @@ export default function ContactSection() {
                     exit={{ opacity: 0, scale: 0.9 }}
                     className="py-16 text-center flex flex-col items-center justify-center"
                   >
-                    <div className="w-16 h-16 rounded-full bg-[#186e4f]/20 border border-[#186e4f]/40 text-[#186e4f] flex items-center justify-center mb-6 shadow-xl shadow-[#186e4f]/20 animate-bounce">
+                    <div className="w-16 h-16 rounded-full bg-[#186e4f]/20 border border-[#186e4f]/40 text-[#186e4f] flex items-center justify-center mb-6 animate-bounce">
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
                     <h3 className="font-space text-2xl font-bold text-[#fffdec] mb-2">
@@ -265,7 +265,7 @@ export default function ContactSection() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#186e4f] to-[#e1e440] font-space font-bold text-sm text-[#070d0c] shadow-xl shadow-[#e1e440]/25 hover:shadow-[#e1e440]/40 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                      className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#186e4f] to-[#e1e440] font-space font-bold text-sm text-[#070d0c] hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
                     >
                       {isSubmitting ? (
                         <>

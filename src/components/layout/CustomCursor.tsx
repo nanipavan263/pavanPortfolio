@@ -1,27 +1,23 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, useSpring, useMotionValue } from "framer-motion";
-
-interface TrailParticle {
-  id: number;
-  x: number;
-  y: number;
-  size: number;
-  color: string;
-}
+import { motion, useSpring, useMotionValue, AnimatePresence } from "framer-motion";
+import { Play } from "lucide-react";
 
 export default function CustomCursor() {
   const [isHovered, setIsHovered] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
-  const [particles, setParticles] = useState<TrailParticle[]>([]);
 
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
-  const springConfig = { damping: 25, stiffness: 400 };
-  const cursorXSpring = useSpring(cursorX, springConfig);
-  const cursorYSpring = useSpring(cursorY, springConfig);
+  // Tight spring for the core marker
+  const coreX = useSpring(cursorX, { damping: 30, stiffness: 500 });
+  const coreY = useSpring(cursorY, { damping: 30, stiffness: 500 });
+
+  // Looser spring for the trailing rings
+  const ringX = useSpring(cursorX, { damping: 20, stiffness: 220 });
+  const ringY = useSpring(cursorY, { damping: 20, stiffness: 220 });
 
   useEffect(() => {
     if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
@@ -29,27 +25,9 @@ export default function CustomCursor() {
       return;
     }
 
-    let lastSpawn = 0;
-    const colors = ["#e1e440", "#186e4f", "#fffdec", "#e1e440"];
-
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
-
-      // Spawn trailing sparkle particles on move
-      const now = Date.now();
-      if (now - lastSpawn > 40) {
-        lastSpawn = now;
-        const newParticle: TrailParticle = {
-          id: now + Math.random(),
-          x: e.clientX,
-          y: e.clientY,
-          size: Math.random() * 6 + 4,
-          color: colors[Math.floor(Math.random() * colors.length)],
-        };
-
-        setParticles((prev) => [...prev.slice(-12), newParticle]);
-      }
     };
 
     const handleMouseOver = (e: MouseEvent) => {
@@ -76,67 +54,62 @@ export default function CustomCursor() {
     };
   }, [cursorX, cursorY]);
 
-  // Clean up particles
-  useEffect(() => {
-    if (particles.length === 0) return;
-    const timer = setTimeout(() => {
-      setParticles((prev) => prev.slice(1));
-    }, 400);
-    return () => clearTimeout(timer);
-  }, [particles]);
-
   if (isTouchDevice) return null;
 
   return (
     <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
-      {/* Trailing Particle Sparkles */}
-      {particles.map((p) => (
-        <motion.div
-          key={p.id}
-          initial={{ opacity: 0.8, scale: 1 }}
-          animate={{ opacity: 0, scale: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="fixed top-0 left-0 rounded-full blur-[1px] pointer-events-none"
-          style={{
-            x: p.x,
-            y: p.y,
-            width: p.size,
-            height: p.size,
-            backgroundColor: p.color,
-            translateX: "-50%",
-            translateY: "-50%",
-            boxShadow: `0 0 10px ${p.color}`,
-          }}
-        />
-      ))}
-
-      {/* Outer Spring Ring */}
+      {/* Ambient sonar ping, pulses outward continuously */}
       <motion.div
-        className="fixed top-0 left-0 w-10 h-10 rounded-full border border-[#e1e440]/50 mix-blend-difference"
-        style={{
-          x: cursorXSpring,
-          y: cursorYSpring,
-          translateX: "-50%",
-          translateY: "-50%",
-        }}
+        className="fixed top-0 left-0 w-6 h-6 rounded-full border border-[#e1e440]"
+        style={{ x: ringX, y: ringY, translateX: "-50%", translateY: "-50%" }}
+        animate={{ scale: [1, 2.2], opacity: [0.45, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
+      />
+
+      {/* Slow rotating dashed ring, like a render/loading indicator */}
+      <motion.div
+        className="fixed top-0 left-0 w-6 h-6 rounded-full border border-dashed border-[#fffdec]/40"
+        style={{ x: ringX, y: ringY, translateX: "-50%", translateY: "-50%" }}
         animate={{
-          scale: isHovered ? 2.2 : 1,
-          backgroundColor: isHovered ? "rgba(225, 228, 64, 0.25)" : "rgba(255, 253, 236, 0)",
-          borderColor: isHovered ? "rgba(225, 228, 64, 0.9)" : "rgba(24, 110, 79, 0.5)",
+          rotate: 360,
+          opacity: isHovered ? 0 : 1,
+          scale: isHovered ? 0.5 : 1,
         }}
-        transition={{ duration: 0.2 }}
+        transition={{
+          rotate: { duration: 7, repeat: Infinity, ease: "linear" },
+          opacity: { duration: 0.25 },
+          scale: { duration: 0.25 },
+        }}
       />
 
-      {/* Inner Glowing Core Dot */}
+      {/* Core marker: a dot that morphs into a play glyph on hover */}
       <motion.div
-        className="fixed top-0 left-0 w-2.5 h-2.5 rounded-full bg-[#e1e440] shadow-[0_0_12px_#e1e440]"
-        style={{
-          x: cursorX,
-          y: cursorY,
-          translateX: "-50%",
-          translateY: "-50%",
-        }}
-      />
+        className="fixed top-0 left-0 flex items-center justify-center"
+        style={{ x: coreX, y: coreY, translateX: "-50%", translateY: "-50%" }}
+      >
+        <AnimatePresence mode="wait">
+          {isHovered ? (
+            <motion.div
+              key="play"
+              initial={{ scale: 0, rotate: -90, opacity: 0 }}
+              animate={{ scale: 1, rotate: 0, opacity: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 420, damping: 22 }}
+            >
+              <Play className="w-3.5 h-3.5 fill-[#e1e440] text-[#e1e440]" />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="dot"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0 }}
+              transition={{ type: "spring", stiffness: 420, damping: 22 }}
+              className="w-1.5 h-1.5 rounded-full bg-[#e1e440]"
+            />
+          )}
+        </AnimatePresence>
+      </motion.div>
     </div>
   );
 }

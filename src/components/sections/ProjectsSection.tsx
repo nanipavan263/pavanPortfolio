@@ -49,7 +49,7 @@ export default function ProjectsSection() {
                 onClick={() => setFilter(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-space font-medium transition-all ${
                   filter === cat
-                    ? "bg-gradient-to-r from-[#e1e440] to-[#186e4f] text-[#070d0c] shadow-md shadow-[#e1e440]/20"
+                    ? "bg-gradient-to-r from-[#e1e440] to-[#186e4f] text-[#070d0c]"
                     : "glass text-[#fffdec]/70 hover:text-[#fffdec] hover:bg-[#fffdec]/10"
                 }`}
               >
@@ -85,7 +85,7 @@ export default function ProjectsSection() {
                   {/* Play Button Overlay */}
                   <button
                     onClick={() => setSelectedProject(project)}
-                    className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-[#e1e440]/90 text-[#070d0c] flex items-center justify-center shadow-2xl shadow-[#e1e440]/50 scale-90 group-hover:scale-100 transition-all duration-300"
+                    className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-[#e1e440]/90 text-[#070d0c] flex items-center justify-center scale-90 group-hover:scale-100 transition-all duration-300"
                     aria-label="Preview Project"
                   >
                     <Play className="w-7 h-7 fill-[#070d0c] translate-x-0.5" />
@@ -152,7 +152,7 @@ export default function ProjectsSection() {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative w-full max-w-4xl glass-strong rounded-3xl overflow-hidden border-[#fffdec]/20 z-10 shadow-2xl"
+              className="relative w-full max-w-4xl glass-strong rounded-3xl overflow-hidden border-[#fffdec]/20 z-10"
             >
               <div className="flex items-center justify-between px-6 py-4 border-b border-[#fffdec]/10">
                 <div className="flex items-center gap-2">

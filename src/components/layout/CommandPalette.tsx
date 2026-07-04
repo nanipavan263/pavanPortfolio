@@ -73,7 +73,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="relative w-full max-w-xl glass-strong rounded-3xl overflow-hidden shadow-2xl border-[#fffdec]/20 z-10"
+            className="relative w-full max-w-xl glass-strong rounded-3xl overflow-hidden border-[#fffdec]/20 z-10"
           >
             {/* Search Input Bar */}
             <div className="flex items-center px-6 py-4 border-b border-[#fffdec]/10 gap-3">

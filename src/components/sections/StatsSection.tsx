@@ -19,7 +19,7 @@ export default function StatsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="glass-strong rounded-3xl p-8 sm:p-12 border-[#fffdec]/15 shadow-2xl backdrop-blur-3xl"
+          className="glass-strong rounded-3xl p-8 sm:p-12 border-[#fffdec]/15 backdrop-blur-3xl"
         >
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-[#fffdec]/10">
             {stats.map((stat, idx) => (

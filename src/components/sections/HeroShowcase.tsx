@@ -89,7 +89,7 @@ function FloatingTool({
                 ease: "easeInOut",
                 delay: tool.delay,
               }}
-              className="flex items-center gap-2 px-3.5 py-2 rounded-2xl glass-strong border-[#fffdec]/20 shadow-2xl cursor-default"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-2xl glass-strong border-[#fffdec]/20 cursor-default"
             >
               <div className="p-1.5 rounded-xl bg-[#e1e440]/20 text-[#e1e440]">
                 <Icon className="w-3.5 h-3.5" />
@@ -128,7 +128,7 @@ function FloatingStat({
       style={{ top: `${stat.top}%`, left: `${stat.left}%` }}
     >
       <motion.div style={{ y: parallaxY, x: mouseOffsetX, opacity: revealOpacity, scale: revealScale }}>
-        <span className="block font-space font-extrabold text-3xl sm:text-4xl text-[#fffdec] tracking-tight drop-shadow-lg">
+        <span className="block font-space font-extrabold text-3xl sm:text-4xl text-[#fffdec] tracking-tight">
           <AnimatedCounter value={stat.value} />
           <span className="text-[#e1e440]">{stat.suffix}</span>
         </span>

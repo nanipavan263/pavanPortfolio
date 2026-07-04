@@ -22,7 +22,7 @@ export default function Footer() {
             <div key={i} className="flex items-center gap-12 text-4xl sm:text-7xl font-display font-bold tracking-tight text-[#fffdec]/20 uppercase">
               <span>Motion Graphics</span>
               <span className="w-3 h-3 rounded-full bg-[#fffdec]/20" />
-              <span className="text-gradient drop-shadow-[0_0_25px_rgba(225,228,64,0.4)] opacity-100">Color Grading</span>
+              <span className="text-gradient opacity-100">Color Grading</span>
               <span className="w-3 h-3 rounded-full bg-[#fffdec]/20" />
               <span>AI Workflows</span>
               <span className="w-3 h-3 rounded-full bg-[#fffdec]/20" />
@@ -74,7 +74,7 @@ export default function Footer() {
 
             <button
               onClick={scrollToTop}
-              className="px-6 py-3 rounded-full bg-[#fffdec] text-[#070d0c] font-space font-bold text-xs hover:bg-[#fffdec]/90 shadow-lg transition-all flex items-center gap-1.5 ml-2"
+              className="px-6 py-3 rounded-full bg-[#fffdec] text-[#070d0c] font-space font-bold text-xs hover:bg-[#fffdec]/90 transition-all flex items-center gap-1.5 ml-2"
             >
               <span>Back to top</span>
               <ArrowUp className="w-3.5 h-3.5" />
