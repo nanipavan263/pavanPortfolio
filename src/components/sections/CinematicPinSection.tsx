@@ -41,8 +41,8 @@ export default function CinematicPinSection() {
           className="absolute inset-0"
         >
           <img
-            src="https://images.unsplash.com/photo-1693645325820-03c4be5b7031?auto=format&fit=crop&w=1600&q=80"
-            alt="Camera set up in a dark studio"
+            src="https://images.unsplash.com/photo-1666728451779-85c0bc53d2ef?auto=format&fit=crop&w=1600&q=80"
+            alt="Video editing timeline on a computer screen"
             className="w-full h-full object-cover"
           />
         </motion.div>

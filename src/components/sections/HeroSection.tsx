@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Download, Mail, Instagram, Sparkles } from "lucide-react";
 import portfolioData from "@/content/portfolio.json";
-import HeroShowcase from "./HeroShowcase";
+import HeroEditorRig from "./HeroEditorRig";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -14,8 +14,6 @@ export default function HeroSection() {
     offset: ["start start", "end start"],
   });
 
-  // Draw on scroll SVG path length transform
-  const pathLength = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.4]);
 
   const scrollToContact = (e: React.MouseEvent) => {
@@ -33,36 +31,6 @@ export default function HeroSection() {
       id="hero"
       className="relative min-h-[100svh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-12 pt-32 pb-20 overflow-hidden z-10"
     >
-      {/* Dynamic Draw-on-Scroll SVG Constellation Background */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-30">
-        <motion.path
-          d="M 50 100 Q 350 300 600 150 T 1200 400"
-          fill="none"
-          stroke="url(#heroGradient)"
-          strokeWidth="2"
-          strokeDasharray="8 8"
-          style={{ pathLength }}
-        />
-        <motion.path
-          d="M 100 500 C 400 200 800 600 1300 250"
-          fill="none"
-          stroke="url(#heroGradient2)"
-          strokeWidth="1.5"
-          style={{ pathLength }}
-        />
-        <defs>
-          <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#e1e440" />
-            <stop offset="50%" stopColor="#186e4f" />
-            <stop offset="100%" stopColor="#070d0c" />
-          </linearGradient>
-          <linearGradient id="heroGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#186e4f" />
-            <stop offset="100%" stopColor="#e1e440" />
-          </linearGradient>
-        </defs>
-      </svg>
-
       <motion.div style={{ opacity }} className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
         {/* Left Content Column */}
         <div className="lg:col-span-7 flex flex-col items-start text-left">
@@ -167,9 +135,9 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Right Column: Software Showcase & Impact Numbers */}
+        {/* Right Column: Editor Rig Visual */}
         <div className="lg:col-span-5 flex items-center justify-center">
-          <HeroShowcase />
+          <HeroEditorRig />
         </div>
       </motion.div>
     </section>
