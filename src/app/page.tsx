@@ -14,7 +14,7 @@ import StatsSection from "@/components/sections/StatsSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import SkillsSection from "@/components/sections/SkillsSection";
-import ProjectsSection from "@/components/sections/ProjectsSection";
+import ShowreelSection from "@/components/sections/ShowreelSection";
 import ResumeSection from "@/components/sections/ResumeSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
@@ -40,7 +40,7 @@ export default function Home() {
       <ExperienceSection />
       <ServicesSection />
       <SkillsSection />
-      <ProjectsSection />
+      <ShowreelSection />
       <ResumeSection />
       <TestimonialsSection />
       <ContactSection />

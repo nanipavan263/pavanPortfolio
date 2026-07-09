@@ -35,18 +35,6 @@ export interface SkillItem {
   icon?: string;
 }
 
-export interface ProjectItem {
-  id: string;
-  title: string;
-  category: string;
-  description: string;
-  tags: string[];
-  thumbnail: string;
-  videoUrl?: string;
-  client?: string;
-  featured?: boolean;
-}
-
 export interface ServiceItem {
   id: string;
   title: string;

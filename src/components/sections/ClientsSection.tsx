@@ -7,47 +7,48 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { Sparkles, MousePointerClick } from "lucide-react";
-import FallingText from "@/components/ui/FallingText";
+import { Sparkles } from "lucide-react";
 
-// Multi-word client names are joined with a non-breaking space so FallingText
-// (which splits on " ") treats each client as a single falling word/body.
-const clients = [
-  "Shadab",
-  "Telusa",
-  "AAA",
-  "Accha Telugu",
-  "Advaya",
-  "Aenugu",
-  "Aiwan E Khan",
-  "Am Aha",
-  "Bengaluru Bhavan",
-  "Brunit",
-  "Dusk",
-  "Cravery",
-  "Flavours of Andhra",
-  "Hanok",
-  "Inframyte",
-  "Ishtaa",
-  "Itihaas",
-  "Kanuma",
-  "Kosaraju",
-  "Makau",
-  "Mordern Muse",
-  "Nebesa",
-  "Sanctury",
-  "Soma",
-  "TCT",
-  "Vaikuntapuram",
-  "Zen",
+interface Client {
+  name: string;
+  featured?: boolean;
+}
+
+const clients: Client[] = [
+  { name: "Shadab" },
+  { name: "Telusa" },
+  { name: "AAA", featured: true },
+  { name: "Accha Telugu" },
+  { name: "Advaya" },
+  { name: "Aenugu" },
+  { name: "Aiwan E Khan" },
+  { name: "Am Aha" },
+  { name: "Bengaluru Bhavan" },
+  { name: "Brunit" },
+  { name: "Dusk", featured: true },
+  { name: "Cravery", featured: true },
+  { name: "Flavours of Andhra" },
+  { name: "Hanok" },
+  { name: "Inframyte" },
+  { name: "Ishtaa", featured: true },
+  { name: "Itihaas", featured: true },
+  { name: "Kanuma", featured: true },
+  { name: "Kosaraju" },
+  { name: "Makau" },
+  { name: "Mordern Muse" },
+  { name: "Nebesa" },
+  { name: "Sanctury" },
+  { name: "Soma", featured: true },
+  { name: "TCT", featured: true },
+  { name: "Vaikuntapuram" },
+  { name: "Zen", featured: true },
 ];
 
-const highlightWords = ["AAA", "TCT", "Zen", "Soma", "Kanuma", "Ishtaa", "Cravery", "Dusk", "Itihaas"];
+// A hand-picked span pattern so the grid reads as a bento mosaic rather than
+// a flat uniform grid — featured clients get more room, others stay compact.
+const spanPattern = ["col-span-2", "", "", "", "col-span-2", "", "", ""];
 
-// FallingText splits its text on a plain space to decide where one falling "word"
-// body ends — swap internal spaces for a non-breaking space so multi-word client
-// names (e.g. "Accha Telugu") fall as a single piece instead of splitting apart.
-const fallingClientsText = clients.map((name) => name.replace(/ /g, " ")).join(" ");
+const tiltPattern = [-2, 1.5, -1, 2, -1.5, 1, -2, 1.5];
 
 export default function ClientsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -59,8 +60,6 @@ export default function ClientsSection() {
 
   const badgeOffsetX = useTransform(smoothMouseX, [-0.5, 0.5], [-14, 14]);
   const badgeOffsetY = useTransform(smoothMouseY, [-0.5, 0.5], [-14, 14]);
-  const badgeOffsetX2 = useTransform(smoothMouseX, [-0.5, 0.5], [16, -16]);
-  const badgeOffsetY2 = useTransform(smoothMouseY, [-0.5, 0.5], [10, -10]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = sectionRef.current?.getBoundingClientRect();
@@ -93,7 +92,7 @@ export default function ClientsSection() {
 
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-8 sm:mb-12">
+        <div className="relative flex flex-col items-center text-center mb-14 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -121,36 +120,19 @@ export default function ClientsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 flex items-center gap-2 text-xs sm:text-sm font-mono text-[#fffdec]/40 uppercase tracking-wide"
+            className="mt-4 text-xs sm:text-sm font-mono text-[#fffdec]/40 uppercase tracking-wide"
           >
-            <MousePointerClick className="w-3.5 h-3.5 text-[#e1e440]" />
-            Hover the names below and watch them fall
+            {clients.length}+ brands, one signature style
           </motion.p>
-        </div>
 
-        {/* Falling client names */}
-        <div className="relative h-[440px] sm:h-[520px] lg:h-[560px]">
-          <FallingText
-            className="w-full h-full"
-            text={fallingClientsText}
-            highlightWords={highlightWords}
-            highlightClass="highlighted"
-            trigger="hover"
-            backgroundColor="transparent"
-            wireframes={false}
-            gravity={0.56}
-            fontSize="clamp(1.15rem, 2.6vw, 2.1rem)"
-            mouseConstraintStiffness={0.9}
-          />
-
-          {/* Floating parallax suffix badges */}
+          {/* Floating parallax suffix badge */}
           <motion.div
             style={{ x: badgeOffsetX, y: badgeOffsetY }}
             initial={{ opacity: 0, scale: 0.6 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="absolute top-2 right-2 sm:top-4 sm:right-6 z-30 pointer-events-none"
+            className="absolute -top-2 right-0 z-30 pointer-events-none hidden sm:block"
           >
             <motion.div
               animate={{ y: [0, -8, 0] }}
@@ -167,26 +149,54 @@ export default function ClientsSection() {
               </span>
             </motion.div>
           </motion.div>
+        </div>
 
-          <motion.div
-            style={{ x: badgeOffsetX2, y: badgeOffsetY2 }}
-            initial={{ opacity: 0, scale: 0.6 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="absolute bottom-2 left-2 sm:bottom-4 sm:left-6 z-30 pointer-events-none hidden sm:block"
-          >
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="flex items-center gap-2 px-3.5 py-2 rounded-2xl glass-strong border-[#fffdec]/20"
-            >
-              <span className="text-[10px] font-mono text-[#fffdec]/50 uppercase tracking-wide">
-                And counting
-              </span>
-              <span className="text-xs font-space font-extrabold text-[#e1e440]">&hellip;</span>
-            </motion.div>
-          </motion.div>
+        {/* Bento mosaic of client cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 auto-rows-fr">
+          {clients.map((client, idx) => {
+            const span = spanPattern[idx % spanPattern.length];
+            const tilt = tiltPattern[idx % tiltPattern.length];
+
+            return (
+              <motion.div
+                key={client.name}
+                initial={{ opacity: 0, y: 24, rotate: tilt * 2, scale: 0.92 }}
+                whileInView={{ opacity: 1, y: 0, rotate: tilt, scale: 1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: (idx % 9) * 0.05, ease: "easeOut" }}
+                whileHover={{ rotate: 0, scale: 1.04, y: -4 }}
+                className={`group relative flex items-center justify-center text-center px-4 py-6 sm:py-7 rounded-2xl border transition-colors duration-300 cursor-default ${span} ${
+                  client.featured
+                    ? "glass-strong border-[#e1e440]/30 hover:border-[#e1e440]/60"
+                    : "glass border-[#fffdec]/10 hover:border-[#fffdec]/25"
+                }`}
+              >
+                <span
+                  aria-hidden
+                  className="absolute top-2.5 left-3 text-[9px] font-mono text-[#fffdec]/25 tracking-widest"
+                >
+                  {String(idx + 1).padStart(2, "0")}
+                </span>
+
+                {client.featured && (
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 rounded-2xl bg-[#e1e440]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                )}
+
+                <span
+                  className={`relative font-space font-bold tracking-tight leading-snug ${
+                    client.featured
+                      ? "text-lg sm:text-2xl text-[#e1e440] group-hover:text-[#fffdec]"
+                      : "text-sm sm:text-base text-[#fffdec]/80 group-hover:text-[#fffdec]"
+                  } transition-colors duration-300`}
+                >
+                  {client.name}
+                </span>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

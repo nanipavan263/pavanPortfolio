@@ -31,7 +31,7 @@ export default function HeroSection() {
       id="hero"
       className="relative min-h-[100svh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-12 pt-32 pb-20 overflow-hidden z-10"
     >
-      <motion.div style={{ opacity }} className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
+      <motion.div style={{ opacity }} className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-start z-10">
         {/* Left Content Column */}
         <div className="lg:col-span-7 flex flex-col items-start text-left">
           {/* Availability Pill Badge */}
@@ -136,7 +136,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Column: Editor Rig Visual */}
-        <div className="lg:col-span-5 flex items-center justify-center">
+        <div className="lg:col-span-5 flex items-start justify-center lg:pt-4">
           <HeroEditorRig />
         </div>
       </motion.div>

@@ -32,10 +32,10 @@ interface BadgeSpec {
 }
 
 const badges: BadgeSpec[] = [
-  { label: "Premiere Pro", icon: Film, top: 4, left: 6, depth: 0.5, duration: 4.2, delay: 0 },
-  { label: "After Effects", icon: Sparkles, top: 8, left: 78, depth: 0.9, duration: 5, delay: 0.6 },
-  { label: "DaVinci Resolve", icon: Palette, top: 92, left: 82, depth: 0.7, duration: 4.6, delay: 1.2 },
-  { label: "AI Workflows", icon: Cpu, top: 88, left: 2, depth: 1.0, duration: 4.8, delay: 0.9 },
+  { label: "Premiere Pro", icon: Film, top: 6, left: 8, depth: 0.5, duration: 4.2, delay: 0 },
+  { label: "After Effects", icon: Sparkles, top: 10, left: 76, depth: 0.9, duration: 5, delay: 0.6 },
+  { label: "DaVinci Resolve", icon: Palette, top: 90, left: 80, depth: 0.7, duration: 4.6, delay: 1.2 },
+  { label: "AI Workflows", icon: Cpu, top: 86, left: 4, depth: 1.0, duration: 4.8, delay: 0.9 },
 ];
 
 const timelineClips = [
@@ -135,13 +135,13 @@ export default function HeroEditorRig() {
       ref={canvasRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full max-w-xl mx-auto mt-8 sm:mt-14 lg:mt-20 h-[440px] sm:h-[540px] lg:h-[600px]"
+      className="relative w-full max-w-xl mx-auto h-[400px] sm:h-[460px] lg:h-[520px]"
       style={{ perspective: 1200 }}
     >
       {/* Ambient pulsing glow */}
       <motion.div
         aria-hidden
-        className="absolute inset-0 m-auto w-2/3 h-2/3 rounded-full bg-gradient-to-br from-[#e1e440]/20 via-[#186e4f]/20 to-transparent blur-3xl -z-10"
+        className="absolute inset-0 m-auto w-2/3 h-2/3 rounded-full bg-gradient-to-br from-[#e1e440]/25 via-[#186e4f]/25 to-transparent blur-3xl -z-10"
         animate={{ opacity: [0.5, 0.85, 0.5], scale: [1, 1.08, 1] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -149,17 +149,33 @@ export default function HeroEditorRig() {
       {/* Central editor window mock */}
       <motion.div
         style={{ rotateX: cardTiltX, rotateY: cardTiltY }}
-        className="absolute inset-x-[6%] sm:inset-x-[10%] top-1/2 -translate-y-1/2 rounded-2xl glass-strong border-[#fffdec]/15 overflow-hidden shadow-2xl"
+        className="absolute inset-x-[6%] sm:inset-x-[10%] top-1/2 -translate-y-1/2 rounded-2xl glass-strong border-[#fffdec]/15 overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.6),0_0_40px_-10px_rgba(225,228,64,0.15)] ring-1 ring-[#fffdec]/[0.06]"
       >
+        {/* Top accent strip */}
+        <motion.div
+          aria-hidden
+          className="h-[3px] w-full bg-gradient-to-r from-[#e1e440] via-[#186e4f] to-[#e1e440]"
+          style={{ backgroundSize: "200% 100%" }}
+          animate={{ backgroundPositionX: ["0%", "200%"] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+        />
+
         {/* Title bar */}
-        <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#fffdec]/10">
+        <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#fffdec]/10 bg-[#fffdec]/[0.02]">
           <span className="w-2.5 h-2.5 rounded-full bg-[#e1e440]/70" />
           <span className="w-2.5 h-2.5 rounded-full bg-[#186e4f]/70" />
           <span className="w-2.5 h-2.5 rounded-full bg-[#fffdec]/30" />
           <span className="ml-2 text-[10px] font-mono text-[#fffdec]/40 tracking-wide">
             final_cut_v3.prproj
           </span>
-          <span className="ml-auto flex items-center gap-1 text-[9px] font-mono text-[#e1e440]/80">
+          <span className="ml-auto flex items-center gap-1.5 text-[9px] font-mono text-[#e1e440]/80">
+            <motion.span
+              className="w-1.5 h-1.5 rounded-full bg-[#e1e440]"
+              animate={{ opacity: [1, 0.3, 1] }}
+              transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+            />
+            REC
+            <span className="text-[#fffdec]/20 mx-0.5">|</span>
             <Clapperboard className="w-3 h-3" /> 4K &bull; 60FPS
           </span>
         </div>
@@ -177,7 +193,7 @@ export default function HeroEditorRig() {
             whileHover={{ scale: 1.1 }}
             animate={{ scale: [1, 1.06, 1] }}
             transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute inset-0 m-auto w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#fffdec]/95 flex items-center justify-center text-[#070d0c] shadow-lg"
+            className="absolute inset-0 m-auto w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#fffdec]/95 flex items-center justify-center text-[#070d0c] shadow-[0_0_0_1px_rgba(255,253,236,0.15),0_8px_24px_-4px_rgba(0,0,0,0.5),0_0_30px_-6px_rgba(225,228,64,0.5)]"
           >
             <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-current" />
           </motion.button>
