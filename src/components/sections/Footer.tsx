@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="whitespace-nowrap flex animate-marquee items-center gap-12">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="flex items-center gap-12 text-4xl sm:text-7xl font-display font-bold tracking-tight text-[#fffdec]/20 uppercase">
-              <span>Motion Graphics</span>
+              <span>Graphic Design</span>
               <span className="w-3 h-3 rounded-full bg-[#fffdec]/20" />
               <span className="text-gradient opacity-100">Color Grading</span>
               <span className="w-3 h-3 rounded-full bg-[#fffdec]/20" />

@@ -25,10 +25,10 @@ interface ToolSpec {
 
 const tools: ToolSpec[] = [
   { label: "Premiere Pro", icon: Film, top: 20, left: 12, depth: 0.5, duration: 4.2, delay: 0 },
-  { label: "After Effects", icon: Sparkles, top: 16, left: 68, depth: 0.9, duration: 5, delay: 0.6 },
+  { label: "Illustrator", icon: PenTool, top: 16, left: 68, depth: 0.9, duration: 5, delay: 0.6 },
   { label: "DaVinci Resolve", icon: Palette, top: 44, left: 84, depth: 0.7, duration: 4.6, delay: 1.2 },
   { label: "Photoshop", icon: ImageIcon, top: 54, left: 4, depth: 1.1, duration: 5.4, delay: 0.3 },
-  { label: "Illustrator", icon: PenTool, top: 76, left: 76, depth: 0.6, duration: 3.8, delay: 1.8 },
+  { label: "Canva Pro", icon: Sparkles, top: 76, left: 76, depth: 0.6, duration: 3.8, delay: 1.8 },
   { label: "AI Workflows", icon: Cpu, top: 96, left: 32, depth: 1.0, duration: 4.8, delay: 0.9 },
 ];
 

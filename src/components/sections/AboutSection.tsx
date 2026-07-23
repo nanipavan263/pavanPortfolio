@@ -28,7 +28,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-space text-4xl sm:text-6xl font-bold tracking-tight text-[#fffdec]"
           >
-            A storyteller who edits with <span className="text-gradient-accent">intent.</span>
+            A storyteller who designs with <span className="text-gradient-accent">intent.</span>
           </motion.h2>
         </div>
 
@@ -46,7 +46,7 @@ export default function AboutSection() {
                 {portfolioData.bio}
               </p>
               <p className="text-[#fffdec]/60 text-sm sm:text-base leading-relaxed font-inter">
-                To craft compelling visual narratives that elevate brands, blending cinematic storytelling with cutting-edge motion design and AI-driven workflows.
+                To craft compelling visual narratives that elevate brands, blending cinematic storytelling with cutting-edge graphic design and AI-driven creative workflows.
               </p>
             </div>
 
@@ -120,7 +120,7 @@ export default function AboutSection() {
                     <p className="text-xs font-medium text-[#fffdec]/70 mb-4">{edu.institution}</p>
                   </div>
                   <p className="text-[11px] font-mono text-[#fffdec]/40 border-t border-[#fffdec]/5 pt-3">
-                    {idx === 0 ? "Motion Graphics, VFX, Video Production" : "Technical foundations & systems thinking"}
+                    {idx === 0 ? "Video Editing, Graphic Design, Visual Production" : "Technical foundations & systems thinking"}
                   </p>
                 </motion.div>
               ))}

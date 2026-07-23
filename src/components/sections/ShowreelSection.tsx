@@ -190,7 +190,7 @@ export default function ShowreelSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-space text-4xl sm:text-6xl font-bold tracking-tight text-[#fffdec]"
           >
-            Work, <span className="text-gradient-accent">in motion.</span>
+            Work, <span className="text-gradient-accent">in frames.</span>
           </motion.h2>
         </div>
 

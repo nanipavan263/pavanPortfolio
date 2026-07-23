@@ -90,7 +90,7 @@ export default function ContactSection() {
             Let&apos;s Create Something <span className="text-gradient-accent">Extraordinary</span>
           </motion.h2>
           <p className="text-[#fffdec]/60 text-base font-inter max-w-xl">
-            Have a brand campaign, commercial ad, or motion graphics project in mind? Reach out and let&apos;s build magic together.
+            Have a brand campaign, commercial ad, or graphic design project in mind? Reach out and let&apos;s build magic together.
           </p>
         </div>
 

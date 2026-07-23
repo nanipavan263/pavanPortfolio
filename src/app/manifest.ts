@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Pavan Kalyan — Video Editor & Motion Graphics Designer",
+    name: "Pavan Kalyan — Video Editor & Graphic Designer",
     short_name: "Pavan Kalyan Portfolio",
     description: "Award-winning portfolio of Pavan Kalyan",
     start_url: "/",

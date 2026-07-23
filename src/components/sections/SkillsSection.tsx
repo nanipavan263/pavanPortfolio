@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu, Film, Palette, Lightbulb, type LucideIcon } from "lucide-react";
+import { Cpu, Film, Palette, Lightbulb, PenTool, type LucideIcon } from "lucide-react";
 
 interface Skill {
   name: string;
@@ -26,13 +26,13 @@ const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    title: "Motion Graphics & VFX",
-    icon: Palette,
+    title: "Graphic Design",
+    icon: PenTool,
     skills: [
-      { name: "Adobe After Effects", level: 95 },
-      { name: "Kinetic Typography", level: 92 },
-      { name: "Logo Stings & Idents", level: 94 },
-      { name: "Lower-Thirds & Assets", level: 90 },
+      { name: "Adobe Photoshop", level: 95 },
+      { name: "Adobe Illustrator", level: 90 },
+      { name: "Brand Identity Design", level: 92 },
+      { name: "Social Media Graphics", level: 94 },
     ],
   },
   {
@@ -40,9 +40,9 @@ const skillGroups: SkillGroup[] = [
     icon: Cpu,
     skills: [
       { name: "AI Video Editing", level: 88 },
-      { name: "Runway ML", level: 82 },
+      { name: "Canva AI & Adobe Firefly", level: 85 },
       { name: "ElevenLabs Voice Synth", level: 78 },
-      { name: "Generative B-Roll & VFX", level: 85 },
+      { name: "Runway ML & Generative VFX", level: 82 },
     ],
   },
   {

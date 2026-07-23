@@ -25,18 +25,18 @@ const experiences: Experience[] = [
     location: "Hyderabad, India",
     duration: "MAY 2025 — PRESENT",
     isCurrent: true,
-    role: "VIDEO EDITOR & MOTION GRAPHICS DESIGNER",
+    role: "VIDEO EDITOR & GRAPHIC DESIGNER",
     description:
-      "Leading the visual production pipeline — from commercial ad concepts to motion-driven brand campaigns.",
+      "Leading the visual production pipeline — from commercial ad concepts to design-driven brand campaigns.",
     bullets: [
       "Direct and edit commercial advertisements for digital marketing clients",
-      "Design motion graphics, kinetic typography, and brand identity reels",
+      "Design brand graphics, social media templates, and identity assets",
       "Build social media campaign assets across Reels, Shorts, and TVCs",
       "Collaborate with strategists and designers on full-funnel creative",
     ],
     achievements: [
       "Shipped 40+ commercial ad cuts across 12 brands",
-      "Established a reusable motion-graphics template system",
+      "Established a reusable brand design template system",
     ],
   },
   {
@@ -66,11 +66,11 @@ const experiences: Experience[] = [
     location: "Hyderabad, India",
     duration: "MAR 2024 — NOV 2024",
     isCurrent: false,
-    role: "MARKETING CREATIVES & PROMOTIONAL VIDEO EDITOR",
+    role: "VIDEO EDITOR & GRAPHIC DESIGNER (INTERN → FULL-TIME)",
     description:
-      "Started as an intern, promoted to full-time creative — produced high-converting ad creatives and promotional videos.",
+      "Started as an intern, promoted to full-time creative — produced high-converting ad creatives, graphic designs, and promotional videos.",
     bullets: [
-      "Designed marketing creatives for multiple brands across categories",
+      "Designed marketing creatives and graphic layouts for multiple brands",
       "Edited promotional videos, advertisements, and social media content",
       "A/B tested creative variations for performance campaigns",
     ],

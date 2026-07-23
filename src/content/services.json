@@ -8,16 +8,16 @@
   },
   {
     "id": "srv-2",
-    "title": "Motion Graphics & VFX",
-    "description": "Custom animations, kinetic typography, dynamic lower-thirds, and visual effects built in After Effects.",
-    "icon": "Sparkles",
-    "highlights": ["Logo animations", "2D/3D motion assets", "Kinetic typography", "Explainer graphics"]
+    "title": "Brand Identity & Graphic Design",
+    "description": "Custom logos, brand kits, social media templates, and visual identity systems crafted in Photoshop and Illustrator.",
+    "icon": "Palette",
+    "highlights": ["Logo & brand mark design", "Social media templates", "Marketing collateral", "Brand style guides"]
   },
   {
     "id": "srv-3",
     "title": "Cinematic Color Grading",
     "description": "Professional color transformation in DaVinci Resolve to establish atmospheric moods and brand color fidelity.",
-    "icon": "Palette",
+    "icon": "Sparkles",
     "highlights": ["LUT development", "Skin tone correction", "Shot matching", "HDR workflows"]
   },
   {

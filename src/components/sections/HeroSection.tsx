@@ -64,7 +64,7 @@ export default function HeroSection() {
             className="flex items-center gap-2 text-base sm:text-lg font-space font-semibold text-[#e1e440] mb-6"
           >
             <Sparkles className="w-4 h-4 text-[#e1e440] shrink-0" />
-            <span>Video Editor & Motion Graphics Designer</span>
+            <span>Video Editor & Graphic Designer</span>
           </motion.div>
 
           {/* Bio Description */}
@@ -74,7 +74,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-sm sm:text-base text-[#fffdec]/65 font-inter leading-relaxed max-w-xl mb-10"
           >
-            Crafting cinematic stories that move brands forward. Creative Video Editor and Motion Graphics Designer with 2+ years of experience creating engaging content for brands and digital platforms. Skilled in video editing, storytelling, motion graphics, color grading, and AI-powered creative workflows.
+            Crafting cinematic stories that move brands forward. Creative Video Editor and Graphic Designer with 2+ years of experience creating engaging content for brands and digital platforms. Skilled in video editing, brand visual design, graphic design, color grading, and AI-powered creative workflows.
           </motion.p>
 
           {/* Action Buttons Row */}

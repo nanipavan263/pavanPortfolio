@@ -8,7 +8,7 @@ export default function ResumeSection() {
   const features = [
     "Comprehensive Work Experience (2+ Years)",
     "Diploma in Animation & Multimedia + Engineering",
-    "Detailed Toolstack & Creative Competencies",
+    "Detailed Toolstack & Design Competencies",
     "Verified Client & Agency Track Record",
   ];
 
@@ -83,14 +83,14 @@ export default function ResumeSection() {
 
             <div className="space-y-3 py-4 text-xs text-[#fffdec]/50 font-mono">
               <div className="p-3 rounded-xl bg-[#fffdec]/5 border border-[#fffdec]/5">
-                <p className="text-[#e1e440] font-bold">Video Editor & Motion Graphics</p>
+                <p className="text-[#e1e440] font-bold">Video Editor & Graphic Designer</p>
                 <p className="text-[10px]">2+ Years Experience</p>
               </div>
               <div className="p-3 rounded-xl bg-[#fffdec]/5 border border-[#fffdec]/5">
                 <p className="text-[#fffdec] font-semibold">The Vivid View • BIG TV • Grid Agency</p>
               </div>
               <div className="p-3 rounded-xl bg-[#fffdec]/5 border border-[#fffdec]/5">
-                <p className="text-[#fffdec] font-semibold">Premiere Pro • After Effects • DaVinci</p>
+                <p className="text-[#fffdec] font-semibold">Premiere Pro • Photoshop • DaVinci</p>
               </div>
             </div>
 

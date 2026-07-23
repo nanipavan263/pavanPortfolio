@@ -33,8 +33,8 @@ interface BadgeSpec {
 
 const badges: BadgeSpec[] = [
   { label: "Premiere Pro", icon: Film, top: 6, left: 8, depth: 0.5, duration: 4.2, delay: 0 },
-  { label: "After Effects", icon: Sparkles, top: 10, left: 76, depth: 0.9, duration: 5, delay: 0.6 },
-  { label: "DaVinci Resolve", icon: Palette, top: 90, left: 80, depth: 0.7, duration: 4.6, delay: 1.2 },
+  { label: "Photoshop", icon: Palette, top: 10, left: 76, depth: 0.9, duration: 5, delay: 0.6 },
+  { label: "DaVinci Resolve", icon: Sparkles, top: 90, left: 80, depth: 0.7, duration: 4.6, delay: 1.2 },
   { label: "AI Workflows", icon: Cpu, top: 86, left: 4, depth: 1.0, duration: 4.8, delay: 0.9 },
 ];
 

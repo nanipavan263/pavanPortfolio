@@ -26,21 +26,23 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://pavankalyan.vercel.app"),
   title: {
-    default: "Pavan Kalyan — Video Editor & Motion Graphics Designer",
+    default: "Pavan Kalyan — Video Editor & Graphic Designer",
     template: "%s | Pavan Kalyan",
   },
   description:
-    "Award-winning portfolio of Pavan Kalyan, a Creative Video Editor and Motion Graphics Designer specializing in commercial ads, After Effects VFX, DaVinci color grading, and AI workflows.",
+    "Portfolio of Pavan Kalyan, a Creative Video Editor and Graphic Designer specializing in commercial ads, brand identity design, DaVinci color grading, and AI-powered creative workflows.",
   keywords: [
     "Pavan Kalyan",
     "Video Editor",
-    "Motion Graphics Designer",
-    "After Effects",
+    "Graphic Designer",
+    "Photoshop",
+    "Illustrator",
     "Premiere Pro",
     "DaVinci Resolve",
     "Color Grading",
     "Commercial Ads",
     "Hyderabad Video Editor",
+    "Hyderabad Graphic Designer",
   ],
   authors: [{ name: "Pavan Kalyan" }],
   creator: "Pavan Kalyan",
@@ -48,15 +50,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://pavankalyan.vercel.app",
-    title: "Pavan Kalyan — Video Editor & Motion Graphics Designer",
+    title: "Pavan Kalyan — Video Editor & Graphic Designer",
     description:
-      "Crafting high-impact commercial ads, immersive motion graphics, and digital storytelling for global brands.",
+      "Crafting high-impact commercial videos, compelling brand visuals, and digital storytelling for global brands.",
     siteName: "Pavan Kalyan Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pavan Kalyan — Video Editor & Motion Graphics Designer",
-    description: "Creative Video Editor and Motion Graphics Designer based in Hyderabad.",
+    title: "Pavan Kalyan — Video Editor & Graphic Designer",
+    description: "Creative Video Editor and Graphic Designer based in Hyderabad.",
   },
   robots: {
     index: true,
@@ -80,7 +82,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Pavan Kalyan",
-              jobTitle: "Video Editor & Motion Graphics Designer",
+              jobTitle: "Video Editor & Graphic Designer",
               worksFor: {
                 "@type": "Organization",
                 name: "The Vivid View",

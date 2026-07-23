@@ -13,7 +13,7 @@ export default function Footer() {
     }
   };
 
-  const marqueeText = "MOTION GRAPHICS • COMMERCIAL ADS • COLOR GRADING • AI CREATIVE WORKFLOWS • STORYTELLING • ";
+  const marqueeText = "GRAPHIC DESIGN • COMMERCIAL ADS • COLOR GRADING • AI CREATIVE WORKFLOWS • STORYTELLING • ";
 
   return (
     <footer className="relative z-10 pt-20 pb-10 border-t border-[#fffdec]/10 bg-[#070d0c]/90 overflow-hidden">
