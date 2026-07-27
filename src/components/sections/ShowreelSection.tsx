@@ -26,6 +26,7 @@ const videos: VideoItem[] = [
   { src: "/videos/soma-reel-1.mp4", client: "Soma", orientation: "portrait" },
   { src: "/videos/kosaraju.mp4", client: "KOSARAJU", orientation: "portrait" },
   { src: "/videos/kanuma-avakaya.mp4", client: "KANUMA", orientation: "portrait" },
+  { src: "/videos/bb-launch.mp4", client: "Bengaluru Bhavan", orientation: "portrait" },
 ];
 
 const landscapeVideos = videos.filter((v) => v.orientation === "landscape");
