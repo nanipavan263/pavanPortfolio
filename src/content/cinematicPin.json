@@ -1,0 +1,13 @@
+{
+  "image": "https://images.unsplash.com/photo-1666728451779-85c0bc53d2ef?auto=format&fit=crop&w=1600&q=80",
+  "imageAlt": "Video editing timeline on a computer screen",
+  "badgeLabel": "BEHIND THE FRAME",
+  "heading": "Where raw footage becomes",
+  "headingHighlight": "a story worth watching.",
+  "paragraph": "Every cut, grade, and transition is shaped with intent — built to hold attention and move brands forward.",
+  "floatingBadges": [
+    { "label": "4K DELIVERY", "icon": "Film" },
+    { "label": "COLOR GRADED", "icon": "Sparkles" },
+    { "label": "CINEMATIC LOOK", "icon": "Clapperboard" }
+  ]
+}

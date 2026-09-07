@@ -1,12 +1,42 @@
 [
-  { "name": "Graphic Design", "level": 95, "category": "Creative Tools", "icon": "Palette" },
-  { "name": "Video Editing", "level": 98, "category": "Video Editing", "icon": "Film" },
-  { "name": "Adobe Premiere Pro", "level": 96, "category": "Video Editing", "icon": "Film" },
-  { "name": "Adobe Photoshop", "level": 94, "category": "Creative Tools", "icon": "Sparkles" },
-  { "name": "Color Grading", "level": 90, "category": "Creative Tools", "icon": "Palette" },
-  { "name": "DaVinci Resolve", "level": 92, "category": "Creative Tools", "icon": "Cpu" },
-  { "name": "AI Video Editing", "level": 88, "category": "AI Tools", "icon": "Cpu" },
-  { "name": "Visual Storytelling", "level": 95, "category": "Soft Skills", "icon": "Lightbulb" },
-  { "name": "Commercial Ad Design", "level": 94, "category": "Creative Tools", "icon": "Megaphone" },
-  { "name": "Social Media Content", "level": 96, "category": "Video Editing", "icon": "Smartphone" }
+  {
+    "title": "Video Editing",
+    "icon": "Film",
+    "skills": [
+      { "name": "Adobe Premiere Pro", "level": 96 },
+      { "name": "Story-driven Editing", "level": 94 },
+      { "name": "Multi-cam Pacing", "level": 90 },
+      { "name": "Sound Design & Audio Mix", "level": 92 }
+    ]
+  },
+  {
+    "title": "Graphic Design",
+    "icon": "PenTool",
+    "skills": [
+      { "name": "Adobe Photoshop", "level": 95 },
+      { "name": "Adobe Illustrator", "level": 90 },
+      { "name": "Brand Identity Design", "level": 92 },
+      { "name": "Social Media Graphics", "level": 94 }
+    ]
+  },
+  {
+    "title": "AI Tools & Workflows",
+    "icon": "Cpu",
+    "skills": [
+      { "name": "AI Video Editing", "level": 88 },
+      { "name": "Canva AI & Adobe Firefly", "level": 85 },
+      { "name": "ElevenLabs Voice Synth", "level": 78 },
+      { "name": "Runway ML & Generative VFX", "level": 82 }
+    ]
+  },
+  {
+    "title": "Creative & Soft Skills",
+    "icon": "Lightbulb",
+    "skills": [
+      { "name": "Visual Storytelling", "level": 95 },
+      { "name": "DaVinci Color Grading", "level": 92 },
+      { "name": "Client Collaboration", "level": 90 },
+      { "name": "Concept Development", "level": 88 }
+    ]
+  }
 ]

@@ -46,7 +46,7 @@ export default function AboutSection() {
                 {portfolioData.bio}
               </p>
               <p className="text-[#fffdec]/60 text-sm sm:text-base leading-relaxed font-inter">
-                To craft compelling visual narratives that elevate brands, blending cinematic storytelling with cutting-edge graphic design and AI-driven creative workflows.
+                {portfolioData.missionStatement}
               </p>
             </div>
 
@@ -88,7 +88,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <p className="text-[#fffdec]/40 uppercase">EDUCATION</p>
-                  <p className="text-[#fffdec] font-space font-semibold text-sm">Arena Animation</p>
+                  <p className="text-[#fffdec] font-space font-semibold text-sm">{educationData[0].institution}</p>
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@ export default function AboutSection() {
                     <p className="text-xs font-medium text-[#fffdec]/70 mb-4">{edu.institution}</p>
                   </div>
                   <p className="text-[11px] font-mono text-[#fffdec]/40 border-t border-[#fffdec]/5 pt-3">
-                    {idx === 0 ? "Video Editing, Graphic Design, Visual Production" : "Technical foundations & systems thinking"}
+                    {edu.focus}
                   </p>
                 </motion.div>
               ))}

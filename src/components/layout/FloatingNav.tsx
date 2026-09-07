@@ -3,20 +3,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Download, Command } from "lucide-react";
+import navItems from "@/content/navigation.json";
 
 export default function FloatingNav({ onOpenCommandPalette }: { onOpenCommandPalette: () => void }) {
   const [activeSection, setActiveSection] = useState<string>("hero");
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
-
-  const navItems = [
-    { label: "HOME", href: "#hero" },
-    { label: "ABOUT", href: "#about" },
-    { label: "EXPERIENCE", href: "#experience" },
-    { label: "SKILLS", href: "#skills" },
-    { label: "SERVICES", href: "#services" },
-    { label: "CONTACT", href: "#contact" },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {

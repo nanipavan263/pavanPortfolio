@@ -2,13 +2,24 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Clapperboard, Film, Sparkles } from "lucide-react";
+import { Clapperboard, Film, Sparkles, type LucideIcon } from "lucide-react";
+import cinematicPinData from "@/content/cinematicPin.json";
 
-const badges = [
-  { label: "4K DELIVERY", icon: Film, className: "top-[16%] left-[8%]", duration: 5, delay: 0 },
-  { label: "COLOR GRADED", icon: Sparkles, className: "bottom-[20%] right-[10%]", duration: 6, delay: 1 },
-  { label: "CINEMATIC LOOK", icon: Clapperboard, className: "top-[22%] right-[12%]", duration: 5.5, delay: 0.6 },
+const iconMap: Record<string, LucideIcon> = { Film, Sparkles, Clapperboard };
+
+const badgePositions = ["top-[16%] left-[8%]", "bottom-[20%] right-[10%]", "top-[22%] right-[12%]"];
+const badgeTimings = [
+  { duration: 5, delay: 0 },
+  { duration: 6, delay: 1 },
+  { duration: 5.5, delay: 0.6 },
 ];
+
+const badges = cinematicPinData.floatingBadges.map((b, i) => ({
+  label: b.label,
+  icon: iconMap[b.icon] || Film,
+  className: badgePositions[i % badgePositions.length],
+  ...badgeTimings[i % badgeTimings.length],
+}));
 
 export default function CinematicPinSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -41,8 +52,8 @@ export default function CinematicPinSection() {
           className="absolute inset-0"
         >
           <img
-            src="https://images.unsplash.com/photo-1666728451779-85c0bc53d2ef?auto=format&fit=crop&w=1600&q=80"
-            alt="Video editing timeline on a computer screen"
+            src={cinematicPinData.image}
+            alt={cinematicPinData.imageAlt}
             className="w-full h-full object-cover"
           />
         </motion.div>
@@ -92,15 +103,14 @@ export default function CinematicPinSection() {
           className="relative z-20 h-full flex flex-col items-center justify-center text-center px-6"
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border-[#fffdec]/15 text-[10px] sm:text-xs font-mono tracking-widest text-[#fffdec]/80 mb-6">
-            BEHIND THE FRAME
+            {cinematicPinData.badgeLabel}
           </span>
           <h2 className="font-display font-bold text-4xl sm:text-6xl lg:text-7xl text-[#fffdec] tracking-tight leading-[0.95] max-w-4xl">
-            Where raw footage becomes{" "}
-            <span className="text-gradient-accent">a story worth watching.</span>
+            {cinematicPinData.heading}{" "}
+            <span className="text-gradient-accent">{cinematicPinData.headingHighlight}</span>
           </h2>
           <p className="mt-6 text-sm sm:text-base text-[#fffdec]/70 font-inter max-w-xl">
-            Every cut, grade, and transition is shaped with intent — built to hold attention
-            and move brands forward.
+            {cinematicPinData.paragraph}
           </p>
         </motion.div>
       </div>

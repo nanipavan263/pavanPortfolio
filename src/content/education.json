@@ -3,12 +3,14 @@
     "id": "edu-1",
     "degree": "Diploma in Animation & Multimedia",
     "institution": "Arena Animation",
-    "years": "2022 – 2024"
+    "years": "2022 – 2024",
+    "focus": "Video Editing, Graphic Design, Visual Production"
   },
   {
     "id": "edu-2",
     "degree": "Diploma in Engineering",
     "institution": "Pallavi Engineering College",
-    "years": "2020 – 2023"
+    "years": "2020 – 2023",
+    "focus": "Technical foundations & systems thinking"
   }
 ]

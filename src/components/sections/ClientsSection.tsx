@@ -8,41 +8,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { Sparkles } from "lucide-react";
-
-interface Client {
-  name: string;
-  featured?: boolean;
-}
-
-const clients: Client[] = [
-  { name: "Shadab" },
-  { name: "Telusa" },
-  { name: "AAA", featured: true },
-  { name: "Accha Telugu" },
-  { name: "Advaya" },
-  { name: "Aenugu" },
-  { name: "Aiwan E Khan" },
-  { name: "Am Aha" },
-  { name: "Bengaluru Bhavan" },
-  { name: "Brunit" },
-  { name: "Dusk", featured: true },
-  { name: "Cravery", featured: true },
-  { name: "Flavours of Andhra" },
-  { name: "Hanok" },
-  { name: "Inframyte" },
-  { name: "Ishtaa", featured: true },
-  { name: "Itihaas", featured: true },
-  { name: "Kanuma", featured: true },
-  { name: "Kosaraju" },
-  { name: "Makau" },
-  { name: "Mordern Muse" },
-  { name: "Nebesa" },
-  { name: "Sanctury" },
-  { name: "Soma", featured: true },
-  { name: "TCT", featured: true },
-  { name: "Vaikuntapuram" },
-  { name: "Zen", featured: true },
-];
+import clients from "@/content/clients.json";
 
 // A hand-picked span pattern so the grid reads as a bento mosaic rather than
 // a flat uniform grid — featured clients get more room, others stay compact.

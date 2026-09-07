@@ -1,8 +1,10 @@
 "use client";
 
+import { Fragment } from "react";
 import { motion } from "framer-motion";
 import { ArrowUp, Instagram, Mail, Phone } from "lucide-react";
 import portfolioData from "@/content/portfolio.json";
+import siteData from "@/content/site.json";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -20,12 +22,12 @@ export default function Footer() {
         <div className="whitespace-nowrap flex animate-marquee items-center gap-12">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="flex items-center gap-12 text-4xl sm:text-7xl font-display font-bold tracking-tight text-[#fffdec]/20 uppercase">
-              <span>Graphic Design</span>
-              <span className="w-3 h-3 rounded-full bg-[#fffdec]/20" />
-              <span className="text-gradient opacity-100">Color Grading</span>
-              <span className="w-3 h-3 rounded-full bg-[#fffdec]/20" />
-              <span>AI Workflows</span>
-              <span className="w-3 h-3 rounded-full bg-[#fffdec]/20" />
+              {siteData.footerMarqueeWords.map((word, wi) => (
+                <Fragment key={wi}>
+                  <span className={wi === 1 ? "text-gradient opacity-100" : undefined}>{word}</span>
+                  <span className="w-3 h-3 rounded-full bg-[#fffdec]/20" />
+                </Fragment>
+              ))}
             </div>
           ))}
         </div>
@@ -40,7 +42,7 @@ export default function Footer() {
               Pavan Kalyan
             </h4>
             <p className="text-xs font-mono text-[#fffdec]/40">
-              © 2026 — Crafted with obsession.
+              © {new Date().getFullYear()} — {siteData.footerCopyright}
             </p>
           </div>
 

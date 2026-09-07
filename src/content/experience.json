@@ -1,38 +1,60 @@
 [
   {
     "id": "exp-1",
-    "company": "The Vivid View (Marketing Agency)",
-    "role": "Video Editor & Graphic Designer",
-    "duration": "MAY 2025 – PRESENT",
+    "company": "The Vivid View",
+    "subtitle": "Marketing Agency",
+    "location": "Hyderabad, India",
+    "duration": "MAY 2025 — PRESENT",
     "isCurrent": true,
-    "responsibilities": [
-      "Creating high-converting commercial ads, social media campaigns, and branded graphic assets for digital marketing clients.",
-      "Developing end-to-end brand visual content strategies with cinematic video pacing and modern graphic design.",
-      "Collaborating with marketing directors to maximize performance analytics and engagement metrics through dynamic video editing and visual design."
+    "role": "VIDEO EDITOR & GRAPHIC DESIGNER",
+    "description": "Leading the visual production pipeline — from commercial ad concepts to design-driven brand campaigns.",
+    "bullets": [
+      "Direct and edit commercial advertisements for digital marketing clients",
+      "Design brand graphics, social media templates, and identity assets",
+      "Build social media campaign assets across Reels, Shorts, and TVCs",
+      "Collaborate with strategists and designers on full-funnel creative"
+    ],
+    "achievements": [
+      "Shipped 40+ commercial ad cuts across 12 brands",
+      "Established a reusable brand design template system"
     ]
   },
   {
     "id": "exp-2",
-    "company": "BIG TV & Chota News",
-    "role": "Broadcast & Digital Media Video Editor",
-    "duration": "DECEMBER 2024 – MAY 2025",
+    "company": "BIG TV — Chota News",
+    "subtitle": "Broadcast Network",
+    "location": "Hyderabad, India",
+    "duration": "DECEMBER 2024 — MAY 2025",
     "isCurrent": false,
-    "responsibilities": [
-      "Edited promotional videos, broadcast television content, and fast-paced digital media for high-traffic platforms.",
-      "Managed rapid turnarounds for news reels, promotional packages, and branded graphic overlays under tight deadlines.",
-      "Enhanced audio engineering, color correction, and visual consistency across all broadcast segments."
+    "role": "VIDEO EDITOR",
+    "description": "Edited promotional reels, broadcast packages, and digital media for one of South India's leading news networks.",
+    "bullets": [
+      "Edited promotional videos and television content for broadcast",
+      "Cut digital-first short formats for social platforms",
+      "Managed tight daily deadlines under live broadcast schedules"
+    ],
+    "achievements": [
+      "Delivered daily packages with zero on-air delivery delays",
+      "Designed visual lower-third templates adopted across the network"
     ]
   },
   {
     "id": "exp-3",
     "company": "Grid Marketing Agency",
-    "role": "Video Editor & Graphic Designer (Intern to Full-Time)",
-    "duration": "MAR 2024 – NOV 2024",
+    "subtitle": "Performance Marketing",
+    "location": "Hyderabad, India",
+    "duration": "MAR 2024 — NOV 2024",
     "isCurrent": false,
-    "responsibilities": [
-      "Designed performance marketing creatives, brand visuals, and edited promotional videos, advertisements, and social media content for multiple brands.",
-      "Executed graphic design layouts, product highlight videos, and creative storytelling assets across social campaigns.",
-      "Promoted from intern (Mar 2024 – May 2024) to full-time specialist (June 2024 – Nov 2024) based on outstanding creative output."
+    "role": "VIDEO EDITOR & GRAPHIC DESIGNER (INTERN → FULL-TIME)",
+    "description": "Started as an intern, promoted to full-time creative — produced high-converting ad creatives, graphic designs, and promotional videos.",
+    "bullets": [
+      "Designed marketing creatives and graphic layouts for multiple brands",
+      "Edited promotional videos, advertisements, and social media content",
+      "A/B tested creative variations for performance campaigns"
+    ],
+    "achievements": [
+      "Promoted from intern to full-time within 3 months",
+      "Contributed to ad campaigns reaching 2M+ impressions"
     ]
   }
 ]

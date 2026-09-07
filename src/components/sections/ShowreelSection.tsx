@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { Smartphone, MonitorPlay, X } from "lucide-react";
+import videosData from "@/content/videos.json";
 
 interface VideoItem {
   src: string;
@@ -11,23 +12,7 @@ interface VideoItem {
   orientation: "landscape" | "portrait";
 }
 
-// Orientation was measured directly from each file's actual video track
-// dimensions; client name is parsed from the original filename.
-const videos: VideoItem[] = [
-  { src: "/videos/am-aha-ambiance-reel.mp4", client: "Am Aha", orientation: "landscape" },
-  { src: "/videos/am-aha-avakaya-reel.mp4", client: "Am Aha", orientation: "landscape" },
-  { src: "/videos/am-aha-teaser.mp4", client: "Am Aha", orientation: "landscape" },
-  { src: "/videos/accha-telugu-kitchen-reel.mp4", client: "Accha Telugu", orientation: "portrait" },
-  { src: "/videos/am-aha-addiction.mp4", client: "Am Aha", orientation: "portrait" },
-  { src: "/videos/am-aha-banquet.mp4", client: "Am Aha", orientation: "portrait" },
-  { src: "/videos/am-aha-reel-4.mp4", client: "Am Aha", orientation: "portrait" },
-  { src: "/videos/bb-cravings.mp4", client: "Bengaluru Bhavan", orientation: "portrait" },
-  { src: "/videos/mars-and-vens-reel-4.mp4", client: "Mars & Vens", orientation: "portrait" },
-  { src: "/videos/soma-reel-1.mp4", client: "Soma", orientation: "portrait" },
-  { src: "/videos/kosaraju.mp4", client: "KOSARAJU", orientation: "portrait" },
-  { src: "/videos/kanuma-avakaya.mp4", client: "KANUMA", orientation: "portrait" },
-  { src: "/videos/bb-launch.mp4", client: "Bengaluru Bhavan", orientation: "portrait" },
-];
+const videos = videosData as VideoItem[];
 
 const landscapeVideos = videos.filter((v) => v.orientation === "landscape");
 const portraitVideos = videos.filter((v) => v.orientation === "portrait");

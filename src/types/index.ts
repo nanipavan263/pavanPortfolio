@@ -10,6 +10,7 @@ export interface HeroData {
 export interface PortfolioData {
   hero: HeroData;
   bio: string;
+  missionStatement: string;
   languages: string[];
   socials: {
     instagram: string;
@@ -22,17 +23,36 @@ export interface PortfolioData {
 export interface ExperienceItem {
   id: string;
   company: string;
-  role: string;
+  subtitle: string;
+  location: string;
   duration: string;
-  isCurrent?: boolean;
-  responsibilities: string[];
+  isCurrent: boolean;
+  role: string;
+  description: string;
+  bullets: string[];
+  achievements: string[];
 }
 
-export interface SkillItem {
+export interface SkillEntry {
   name: string;
   level: number; // percentage 1-100
-  category: string;
-  icon?: string;
+}
+
+export interface SkillGroup {
+  title: string;
+  icon: string;
+  skills: SkillEntry[];
+}
+
+export interface ClientItem {
+  name: string;
+  featured?: boolean;
+}
+
+export interface VideoItem {
+  src: string;
+  client: string;
+  orientation: "landscape" | "portrait";
 }
 
 export interface ServiceItem {
@@ -48,7 +68,7 @@ export interface StatItem {
   label: string;
   value: number;
   suffix: string;
-  description: string;
+  icon: string;
 }
 
 export interface EducationItem {
@@ -56,6 +76,7 @@ export interface EducationItem {
   degree: string;
   institution: string;
   years: string;
+  focus: string;
 }
 
 export interface TestimonialItem {

@@ -2,60 +2,14 @@
 
 import { motion } from "framer-motion";
 import { Cpu, Film, Palette, Lightbulb, PenTool, type LucideIcon } from "lucide-react";
+import skillGroups from "@/content/skills.json";
+
+const iconMap: Record<string, LucideIcon> = { Cpu, Film, Palette, Lightbulb, PenTool };
 
 interface Skill {
   name: string;
   level: number;
 }
-
-interface SkillGroup {
-  title: string;
-  icon: LucideIcon;
-  skills: Skill[];
-}
-
-const skillGroups: SkillGroup[] = [
-  {
-    title: "Video Editing",
-    icon: Film,
-    skills: [
-      { name: "Adobe Premiere Pro", level: 96 },
-      { name: "Story-driven Editing", level: 94 },
-      { name: "Multi-cam Pacing", level: 90 },
-      { name: "Sound Design & Audio Mix", level: 92 },
-    ],
-  },
-  {
-    title: "Graphic Design",
-    icon: PenTool,
-    skills: [
-      { name: "Adobe Photoshop", level: 95 },
-      { name: "Adobe Illustrator", level: 90 },
-      { name: "Brand Identity Design", level: 92 },
-      { name: "Social Media Graphics", level: 94 },
-    ],
-  },
-  {
-    title: "AI Tools & Workflows",
-    icon: Cpu,
-    skills: [
-      { name: "AI Video Editing", level: 88 },
-      { name: "Canva AI & Adobe Firefly", level: 85 },
-      { name: "ElevenLabs Voice Synth", level: 78 },
-      { name: "Runway ML & Generative VFX", level: 82 },
-    ],
-  },
-  {
-    title: "Creative & Soft Skills",
-    icon: Lightbulb,
-    skills: [
-      { name: "Visual Storytelling", level: 95 },
-      { name: "DaVinci Color Grading", level: 92 },
-      { name: "Client Collaboration", level: 90 },
-      { name: "Concept Development", level: 88 },
-    ],
-  },
-];
 
 const SEGMENTS = 16;
 
@@ -139,7 +93,7 @@ export default function SkillsSection() {
         {/* Grid of Grouped Skill Cards — segmented meter style */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillGroups.map((group, groupIdx) => {
-            const Icon = group.icon;
+            const Icon = iconMap[group.icon] || Cpu;
             return (
               <motion.div
                 key={group.title}

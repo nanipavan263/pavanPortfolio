@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Download, Mail, Instagram, Sparkles } from "lucide-react";
 import portfolioData from "@/content/portfolio.json";
+import siteData from "@/content/site.json";
 import HeroEditorRig from "./HeroEditorRig";
 
 export default function HeroSection() {
@@ -43,7 +44,7 @@ export default function HeroSection() {
           >
             <span className="w-2 h-2 rounded-full bg-[#186e4f] animate-ping" />
             <span className="w-2 h-2 rounded-full bg-[#186e4f] -ml-4" />
-            <span className="uppercase">AVAILABLE FOR FREELANCE & FULL-TIME OPPORTUNITIES</span>
+            <span className="uppercase">{siteData.availabilityBadge}</span>
           </motion.div>
 
           {/* Headline Name */}
@@ -64,7 +65,7 @@ export default function HeroSection() {
             className="flex items-center gap-2 text-base sm:text-lg font-space font-semibold text-[#e1e440] mb-6"
           >
             <Sparkles className="w-4 h-4 text-[#e1e440] shrink-0" />
-            <span>Video Editor & Graphic Designer</span>
+            <span>{siteData.heroTagline}</span>
           </motion.div>
 
           {/* Bio Description */}
@@ -74,7 +75,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-sm sm:text-base text-[#fffdec]/65 font-inter leading-relaxed max-w-xl mb-10"
           >
-            Crafting cinematic stories that move brands forward. Creative Video Editor and Graphic Designer with 2+ years of experience creating engaging content for brands and digital platforms. Skilled in video editing, brand visual design, graphic design, color grading, and AI-powered creative workflows.
+            {siteData.heroLongBio}
           </motion.p>
 
           {/* Action Buttons Row */}
@@ -129,9 +130,9 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="flex items-center gap-4 text-[10px] sm:text-xs font-mono tracking-widest text-[#fffdec]/40 uppercase"
           >
-            <span>BASED IN HYDERABAD, TELANGANA, INDIA</span>
+            <span>{siteData.heroLocationLine}</span>
             <span className="w-8 h-px bg-[#fffdec]/20" />
-            <span>OPEN TO REMOTE</span>
+            <span>{siteData.heroRemoteLine}</span>
           </motion.div>
         </div>
 

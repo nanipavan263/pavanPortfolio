@@ -3,14 +3,10 @@
 import { motion } from "framer-motion";
 import { FileText, Download, ExternalLink, Sparkles, CheckCircle2 } from "lucide-react";
 import portfolioData from "@/content/portfolio.json";
+import resumeData from "@/content/resume.json";
 
 export default function ResumeSection() {
-  const features = [
-    "Comprehensive Work Experience (2+ Years)",
-    "Diploma in Animation & Multimedia + Engineering",
-    "Detailed Toolstack & Design Competencies",
-    "Verified Client & Agency Track Record",
-  ];
+  const { features, previewCard } = resumeData;
 
   return (
     <section id="resume" className="relative py-28 px-4 sm:px-6 lg:px-8 z-10">
@@ -83,14 +79,14 @@ export default function ResumeSection() {
 
             <div className="space-y-3 py-4 text-xs text-[#fffdec]/50 font-mono">
               <div className="p-3 rounded-xl bg-[#fffdec]/5 border border-[#fffdec]/5">
-                <p className="text-[#e1e440] font-bold">Video Editor & Graphic Designer</p>
-                <p className="text-[10px]">2+ Years Experience</p>
+                <p className="text-[#e1e440] font-bold">{previewCard.role}</p>
+                <p className="text-[10px]">{previewCard.yearsLine}</p>
               </div>
               <div className="p-3 rounded-xl bg-[#fffdec]/5 border border-[#fffdec]/5">
-                <p className="text-[#fffdec] font-semibold">The Vivid View • BIG TV • Grid Agency</p>
+                <p className="text-[#fffdec] font-semibold">{previewCard.companiesLine}</p>
               </div>
               <div className="p-3 rounded-xl bg-[#fffdec]/5 border border-[#fffdec]/5">
-                <p className="text-[#fffdec] font-semibold">Premiere Pro • Photoshop • DaVinci</p>
+                <p className="text-[#fffdec] font-semibold">{previewCard.toolsLine}</p>
               </div>
             </div>
 

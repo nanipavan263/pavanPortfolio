@@ -3,20 +3,9 @@
 import { motion } from "framer-motion";
 import { Clock, Users, Sparkles, Briefcase, LucideIcon } from "lucide-react";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
+import stats from "@/content/stats.json";
 
-interface Stat {
-  label: string;
-  value: number;
-  suffix: string;
-  icon: LucideIcon;
-}
-
-const stats: Stat[] = [
-  { label: "YEARS EXPERIENCE", value: 2, suffix: "+", icon: Clock },
-  { label: "CLIENTS SERVED", value: 40, suffix: "+", icon: Users },
-  { label: "CREATIVES DELIVERED", value: 300, suffix: "+", icon: Sparkles },
-  { label: "BRANDS WORKED WITH", value: 30, suffix: "+", icon: Briefcase },
-];
+const iconMap: Record<string, LucideIcon> = { Clock, Users, Sparkles, Briefcase };
 
 export default function StatsSection() {
   return (
@@ -41,10 +30,10 @@ export default function StatsSection() {
 
           <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-[#fffdec]/10">
             {stats.map((stat, idx) => {
-              const Icon = stat.icon;
+              const Icon = iconMap[stat.icon] || Sparkles;
               return (
                 <motion.div
-                  key={stat.label}
+                  key={stat.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

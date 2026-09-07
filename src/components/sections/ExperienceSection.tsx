@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { Briefcase, MapPin, Trophy, ChevronRight, Radio } from "lucide-react";
+import experiences from "@/content/experience.json";
 
 interface Experience {
   id: string;
@@ -16,70 +17,6 @@ interface Experience {
   bullets: string[];
   achievements: string[];
 }
-
-const experiences: Experience[] = [
-  {
-    id: "exp-1",
-    company: "The Vivid View",
-    subtitle: "Marketing Agency",
-    location: "Hyderabad, India",
-    duration: "MAY 2025 — PRESENT",
-    isCurrent: true,
-    role: "VIDEO EDITOR & GRAPHIC DESIGNER",
-    description:
-      "Leading the visual production pipeline — from commercial ad concepts to design-driven brand campaigns.",
-    bullets: [
-      "Direct and edit commercial advertisements for digital marketing clients",
-      "Design brand graphics, social media templates, and identity assets",
-      "Build social media campaign assets across Reels, Shorts, and TVCs",
-      "Collaborate with strategists and designers on full-funnel creative",
-    ],
-    achievements: [
-      "Shipped 40+ commercial ad cuts across 12 brands",
-      "Established a reusable brand design template system",
-    ],
-  },
-  {
-    id: "exp-2",
-    company: "BIG TV — Chota News",
-    subtitle: "Broadcast Network",
-    location: "Hyderabad, India",
-    duration: "DECEMBER 2024 — MAY 2025",
-    isCurrent: false,
-    role: "VIDEO EDITOR",
-    description:
-      "Edited promotional reels, broadcast packages, and digital media for one of South India's leading news networks.",
-    bullets: [
-      "Edited promotional videos and television content for broadcast",
-      "Cut digital-first short formats for social platforms",
-      "Managed tight daily deadlines under live broadcast schedules",
-    ],
-    achievements: [
-      "Delivered daily packages with zero on-air delivery delays",
-      "Designed visual lower-third templates adopted across the network",
-    ],
-  },
-  {
-    id: "exp-3",
-    company: "Grid Marketing Agency",
-    subtitle: "Performance Marketing",
-    location: "Hyderabad, India",
-    duration: "MAR 2024 — NOV 2024",
-    isCurrent: false,
-    role: "VIDEO EDITOR & GRAPHIC DESIGNER (INTERN → FULL-TIME)",
-    description:
-      "Started as an intern, promoted to full-time creative — produced high-converting ad creatives, graphic designs, and promotional videos.",
-    bullets: [
-      "Designed marketing creatives and graphic layouts for multiple brands",
-      "Edited promotional videos, advertisements, and social media content",
-      "A/B tested creative variations for performance campaigns",
-    ],
-    achievements: [
-      "Promoted from intern to full-time within 3 months",
-      "Contributed to ad campaigns reaching 2M+ impressions",
-    ],
-  },
-];
 
 const n = experiences.length;
 

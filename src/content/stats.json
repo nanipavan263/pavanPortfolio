@@ -1,30 +1,6 @@
 [
-  {
-    "id": "stat-1",
-    "label": "Clients Served",
-    "value": 50,
-    "suffix": "+",
-    "description": "Brands and agency partners worldwide"
-  },
-  {
-    "id": "stat-2",
-    "label": "Marketing Creatives",
-    "value": 100,
-    "suffix": "+",
-    "description": "High-converting video & graphic deliverables"
-  },
-  {
-    "id": "stat-3",
-    "label": "Years Experience",
-    "value": 2,
-    "suffix": "+",
-    "description": "Professional video editing & graphic design"
-  },
-  {
-    "id": "stat-4",
-    "label": "Satisfaction Rate",
-    "value": 99,
-    "suffix": "%",
-    "description": "Client approval and project success"
-  }
+  { "id": "stat-1", "label": "YEARS EXPERIENCE", "value": 2, "suffix": "+", "icon": "Clock" },
+  { "id": "stat-2", "label": "CLIENTS SERVED", "value": 40, "suffix": "+", "icon": "Users" },
+  { "id": "stat-3", "label": "CREATIVES DELIVERED", "value": 300, "suffix": "+", "icon": "Sparkles" },
+  { "id": "stat-4", "label": "BRANDS WORKED WITH", "value": 30, "suffix": "+", "icon": "Briefcase" }
 ]
