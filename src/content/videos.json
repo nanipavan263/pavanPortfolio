@@ -1,0 +1,22 @@
+[
+  { "src": "/videos/am-aha-ambiance-reel.mp4", "client": "Am Aha", "orientation": "landscape" },
+  { "src": "/videos/am-aha-avakaya-reel.mp4", "client": "Am Aha", "orientation": "landscape" },
+  { "src": "/videos/am-aha-teaser.mp4", "client": "Am Aha", "orientation": "landscape" },
+  { "src": "/videos/accha-telugu-kitchen-reel.mp4", "client": "Accha Telugu", "orientation": "portrait" },
+  { "src": "/videos/am-aha-addiction.mp4", "client": "Am Aha", "orientation": "portrait" },
+  { "src": "/videos/am-aha-banquet.mp4", "client": "Am Aha", "orientation": "portrait" },
+  { "src": "/videos/am-aha-reel-4.mp4", "client": "Am Aha", "orientation": "portrait" },
+  { "src": "/videos/bb-cravings.mp4", "client": "Bengaluru Bhavan", "orientation": "portrait" },
+  { "src": "/videos/mars-and-vens-reel-4.mp4", "client": "Mars & Vens", "orientation": "portrait" },
+  { "src": "/videos/soma-reel-1.mp4", "client": "Soma", "orientation": "portrait" },
+  { "src": "/videos/kosaraju.mp4", "client": "KOSARAJU", "orientation": "portrait" },
+  { "src": "/videos/kanuma-avakaya.mp4", "client": "KANUMA", "orientation": "portrait" },
+  { "src": "/videos/bb-launch.mp4", "client": "Bengaluru Bhavan", "orientation": "portrait" },
+  
+  { "src": "/videos/aa-ha-film-strip.mp4", "client": "Am Aha", "orientation": "portrait" },
+  { "src": "/videos/ekantha-reel.mp4", "client": "Ekantha", "orientation": "portrait" },
+  { "src": "/videos/shadab-launch.mp4", "client": "Shadab", "orientation": "portrait" },
+  { "src": "/videos/the-deccan-project.mp4", "client": "The Deccan", "orientation": "portrait" },
+  { "src": "/videos/tv-sameera-bharadwaj.mp4", "client": "KANUMA", "orientation": "portrait" },
+  { "src": "/videos/vibe-ambience.mp4", "client": "The Vibe", "orientation": "landscape" }
+]
