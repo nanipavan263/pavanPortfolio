@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { Smartphone, MonitorPlay, X } from "lucide-react";
+import { Smartphone, MonitorPlay, X, Play } from "lucide-react";
 import videosData from "@/content/videos.json";
 
 interface VideoItem {
@@ -29,7 +29,21 @@ function VideoCard({
   onOpen: (video: VideoItem) => void;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const isInView = useInView(cardRef, { once: true, margin: "200px" });
+
+  // Load only enough of the file to grab a single still frame as a preview
+  // (no autoplay) — playing every card's full source at once is what made
+  // the grid slow; the real video only streams once opened in the modal.
+  const handleLoadedMetadata = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    try {
+      v.currentTime = Math.min(0.5, (v.duration || 1) / 10);
+    } catch {
+      // ignore — some browsers throw if not yet seekable
+    }
+  };
 
   return (
     <motion.div
@@ -45,12 +59,12 @@ function VideoCard({
     >
       {isInView && (
         <video
+          ref={videoRef}
           src={video.src}
-          autoPlay
-          loop
           muted
           playsInline
           preload="metadata"
+          onLoadedMetadata={handleLoadedMetadata}
           className="absolute inset-0 w-full h-full object-cover bg-black"
         />
       )}
@@ -63,6 +77,12 @@ function VideoCard({
         aria-hidden
         className="absolute inset-0 ring-0 group-hover:ring-2 ring-[#e1e440]/40 rounded-2xl transition-all duration-300 pointer-events-none"
       />
+
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#070d0c]/60 border border-[#fffdec]/30 backdrop-blur flex items-center justify-center group-hover:scale-110 group-hover:bg-[#e1e440] group-hover:border-[#e1e440] transition-all duration-300">
+          <Play className="w-5 h-5 sm:w-6 sm:h-6 text-[#fffdec] group-hover:text-[#070d0c] fill-current ml-0.5" />
+        </div>
+      </div>
 
       <div className="absolute bottom-0 left-0 right-0 p-4 z-10 pointer-events-none">
         <p className="text-xs sm:text-sm font-space font-bold text-[#fffdec] uppercase tracking-wide">
