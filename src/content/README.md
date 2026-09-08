@@ -44,18 +44,32 @@ Open `clients.json`. Each brand is one line like:
 
 ## Adding a video (Showreel section)
 
-1. Drop your new video file into the `public/videos` folder (ask your developer if you're
-   not sure how to get a file into that folder — for a static handoff, you'd upload it there
-   via FTP/hosting file manager).
-2. Open `videos.json` and add a new line:
+Videos are hosted on Vercel Blob storage (not in this project's files), because the
+site is deployed to Vercel and Vercel doesn't support serving large video files
+straight out of the codebase. There are two ways to add one:
+
+**Option A — Vercel dashboard (no coding, do this yourself):**
+1. Go to vercel.com → your project → the **Storage** tab → open the
+   `pavan-portfolio-videos` blob store.
+2. Click **Upload** and pick your video file.
+3. Once uploaded, click the file and copy its **public URL**.
+4. Open `videos.json` and add a new line using that URL:
 
 ```json
-{ "src": "/videos/your-file-name.mp4", "client": "Brand Name", "orientation": "landscape" }
+{ "src": "https://<paste-the-copied-url-here>", "client": "Brand Name", "orientation": "landscape" }
 ```
 
+**Option B — ask your developer to run the bulk upload script:**
+Drop new files into `public/videos` locally, then run
+`bash scripts/upload-all-videos.sh` — it uploads anything new to the same Blob
+store and writes the resulting URLs into `src/content/videos-blob-map.json` for
+you to copy into `videos.json`.
+
+Either way:
 - `orientation` must be `"landscape"` (wide video) or `"portrait"` (tall/reel video) —
   this decides which row it shows up in and what shape the thumbnail is.
-- To remove a video, delete its line the same way as brands above.
+- To remove a video, delete its line the same way as brands above (the file can stay
+  in Blob storage unused, or be deleted from the Storage tab too).
 
 ## Editing your work experience
 

@@ -4,3 +4,9 @@ node_modules
 
 .next/
 *.tsbuildinfo
+.vercel
+.env*
+
+# Videos live on Vercel Blob now (see src/content/videos-blob-map.json and
+# scripts/upload-all-videos.sh) — local copies are just upload source material.
+/public/videos/*.mp4
